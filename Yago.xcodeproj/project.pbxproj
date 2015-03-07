@@ -1,0 +1,465 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2853BB8F1AA4D19600F44668 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2853BA741AA4D19500F44668 /* FacebookSDK.framework */; };
+		2853BC691AABA88800F44668 /* BarDistrictAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */; };
+		2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */; };
+		34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556B7B1A9C5512005635FF /* AppDelegate.swift */; };
+		34556B811A9C5512005635FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34556B7F1A9C5512005635FF /* Main.storyboard */; };
+		34556B831A9C5512005635FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34556B821A9C5512005635FF /* Images.xcassets */; };
+		34556B861A9C5512005635FF /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 34556B841A9C5512005635FF /* LaunchScreen.xib */; };
+		34556B921A9C5512005635FF /* Yago_v1_3Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556B911A9C5512005635FF /* Yago_v1_3Tests.swift */; };
+		34556B9C1A9C5520005635FF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34556B9B1A9C5520005635FF /* MapKit.framework */; };
+		34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556BA11A9C58D8005635FF /* LoginViewController.swift */; };
+		34556BA41A9C58EC005635FF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556BA31A9C58EC005635FF /* MapViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		34556B8C1A9C5512005635FF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 34556B6E1A9C5512005635FF /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 34556B751A9C5512005635FF;
+			remoteInfo = Yago_v1.3;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2853BA741AA4D19500F44668 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
+		2853BC621AA4D60200F44668 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDistrictAnnotation.swift; sourceTree = "<group>"; };
+		2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisitrictFeedViewController.swift; sourceTree = "<group>"; };
+		34556B761A9C5512005635FF /* Yago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yago.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		34556B7A1A9C5512005635FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34556B7B1A9C5512005635FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		34556B801A9C5512005635FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		34556B821A9C5512005635FF /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		34556B851A9C5512005635FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		34556B8B1A9C5512005635FF /* YagoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YagoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		34556B901A9C5512005635FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34556B911A9C5512005635FF /* Yago_v1_3Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Yago_v1_3Tests.swift; sourceTree = "<group>"; };
+		34556B9B1A9C5520005635FF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		34556BA11A9C58D8005635FF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
+		34556BA31A9C58EC005635FF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		34556B731A9C5512005635FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34556B9C1A9C5520005635FF /* MapKit.framework in Frameworks */,
+				2853BB8F1AA4D19600F44668 /* FacebookSDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34556B881A9C5512005635FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2853BC631AAB95F200F44668 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		34556B6D1A9C5512005635FF = {
+			isa = PBXGroup;
+			children = (
+				2853BA741AA4D19500F44668 /* FacebookSDK.framework */,
+				34556B9B1A9C5520005635FF /* MapKit.framework */,
+				34556B781A9C5512005635FF /* Yago */,
+				34556B771A9C5512005635FF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		34556B771A9C5512005635FF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34556B761A9C5512005635FF /* Yago.app */,
+				34556B8B1A9C5512005635FF /* YagoTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		34556B781A9C5512005635FF /* Yago */ = {
+			isa = PBXGroup;
+			children = (
+				34556B7F1A9C5512005635FF /* Main.storyboard */,
+				34556BA11A9C58D8005635FF /* LoginViewController.swift */,
+				34556BA31A9C58EC005635FF /* MapViewController.swift */,
+				2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */,
+				34556B7B1A9C5512005635FF /* AppDelegate.swift */,
+				2853BC631AAB95F200F44668 /* Model */,
+				34556B821A9C5512005635FF /* Images.xcassets */,
+				34556B841A9C5512005635FF /* LaunchScreen.xib */,
+				34556B791A9C5512005635FF /* Supporting Files */,
+				2853BC621AA4D60200F44668 /* Bridging-Header.h */,
+				2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */,
+				34556B8E1A9C5512005635FF /* YagoTests */,
+			);
+			path = Yago;
+			sourceTree = "<group>";
+		};
+		34556B791A9C5512005635FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34556B7A1A9C5512005635FF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		34556B8E1A9C5512005635FF /* YagoTests */ = {
+			isa = PBXGroup;
+			children = (
+				34556B911A9C5512005635FF /* Yago_v1_3Tests.swift */,
+				34556B8F1A9C5512005635FF /* Supporting Files */,
+			);
+			path = YagoTests;
+			sourceTree = SOURCE_ROOT;
+		};
+		34556B8F1A9C5512005635FF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				34556B901A9C5512005635FF /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		34556B751A9C5512005635FF /* Yago */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34556B951A9C5512005635FF /* Build configuration list for PBXNativeTarget "Yago" */;
+			buildPhases = (
+				34556B721A9C5512005635FF /* Sources */,
+				34556B731A9C5512005635FF /* Frameworks */,
+				34556B741A9C5512005635FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yago;
+			productName = Yago;
+			productReference = 34556B761A9C5512005635FF /* Yago.app */;
+			productType = "com.apple.product-type.application";
+		};
+		34556B8A1A9C5512005635FF /* YagoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 34556B981A9C5512005635FF /* Build configuration list for PBXNativeTarget "YagoTests" */;
+			buildPhases = (
+				34556B871A9C5512005635FF /* Sources */,
+				34556B881A9C5512005635FF /* Frameworks */,
+				34556B891A9C5512005635FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				34556B8D1A9C5512005635FF /* PBXTargetDependency */,
+			);
+			name = YagoTests;
+			productName = Yago_v1.3Tests;
+			productReference = 34556B8B1A9C5512005635FF /* YagoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		34556B6E1A9C5512005635FF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = "Team Socket Power";
+				TargetAttributes = {
+					34556B751A9C5512005635FF = {
+						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = JV4M6UNY23;
+					};
+					34556B8A1A9C5512005635FF = {
+						CreatedOnToolsVersion = 6.1.1;
+						TestTargetID = 34556B751A9C5512005635FF;
+					};
+				};
+			};
+			buildConfigurationList = 34556B711A9C5512005635FF /* Build configuration list for PBXProject "Yago" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				he,
+			);
+			mainGroup = 34556B6D1A9C5512005635FF;
+			productRefGroup = 34556B771A9C5512005635FF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				34556B751A9C5512005635FF /* Yago */,
+				34556B8A1A9C5512005635FF /* YagoTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		34556B741A9C5512005635FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34556B811A9C5512005635FF /* Main.storyboard in Resources */,
+				34556B861A9C5512005635FF /* LaunchScreen.xib in Resources */,
+				34556B831A9C5512005635FF /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34556B891A9C5512005635FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		34556B721A9C5512005635FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2853BC691AABA88800F44668 /* BarDistrictAnnotation.swift in Sources */,
+				2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */,
+				34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */,
+				34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */,
+				34556BA41A9C58EC005635FF /* MapViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		34556B871A9C5512005635FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				34556B921A9C5512005635FF /* Yago_v1_3Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		34556B8D1A9C5512005635FF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 34556B751A9C5512005635FF /* Yago */;
+			targetProxy = 34556B8C1A9C5512005635FF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		34556B7F1A9C5512005635FF /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34556B801A9C5512005635FF /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		34556B841A9C5512005635FF /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				34556B851A9C5512005635FF /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		34556B931A9C5512005635FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		34556B941A9C5512005635FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		34556B961A9C5512005635FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer: William Kelly (FN7KX655G7)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
+				INFOPLIST_FILE = Yago/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Yago;
+				SWIFT_OBJC_BRIDGING_HEADER = "Yago/Bridging-Header.h";
+			};
+			name = Debug;
+		};
+		34556B971A9C5512005635FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/FacebookSDK",
+				);
+				INFOPLIST_FILE = Yago/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = Yago;
+				SWIFT_OBJC_BRIDGING_HEADER = "Yago/Bridging-Header.h";
+			};
+			name = Release;
+		};
+		34556B991A9C5512005635FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YagoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = YagoTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yago.app/Yago";
+			};
+			name = Debug;
+		};
+		34556B9A1A9C5512005635FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = YagoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = YagoTests;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yago.app/Yago";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		34556B711A9C5512005635FF /* Build configuration list for PBXProject "Yago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34556B931A9C5512005635FF /* Debug */,
+				34556B941A9C5512005635FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34556B951A9C5512005635FF /* Build configuration list for PBXNativeTarget "Yago" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34556B961A9C5512005635FF /* Debug */,
+				34556B971A9C5512005635FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		34556B981A9C5512005635FF /* Build configuration list for PBXNativeTarget "YagoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34556B991A9C5512005635FF /* Debug */,
+				34556B9A1A9C5512005635FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 34556B6E1A9C5512005635FF /* Project object */;
+}
