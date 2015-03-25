@@ -78,6 +78,13 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
         }
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        let nextScene = segue.destinationViewController as DistrictFeedViewController
+        //For now
+        let currentDistrict = "Buckhead"
+        nextScene.currentDistrict = currentDistrict
+    }
+    
     
     
 

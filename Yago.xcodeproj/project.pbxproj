@@ -18,6 +18,9 @@
 		34556B9C1A9C5520005635FF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34556B9B1A9C5520005635FF /* MapKit.framework */; };
 		34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556BA11A9C58D8005635FF /* LoginViewController.swift */; };
 		34556BA41A9C58EC005635FF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556BA31A9C58EC005635FF /* MapViewController.swift */; };
+		C080CCCA1AC3421C00D7A2C9 /* DistrictFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */; };
+		C080CCCC1AC3482A00D7A2C9 /* BarFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */; };
+		C080CCCE1AC34ACB00D7A2C9 /* BarFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		34556B9B1A9C5520005635FF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34556BA11A9C58D8005635FF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		34556BA31A9C58EC005635FF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+		C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictFeedViewCell.swift; sourceTree = "<group>"; };
+		C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFeedViewController.swift; sourceTree = "<group>"; };
+		C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFeedViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 			isa = PBXGroup;
 			children = (
 				34556B7F1A9C5512005635FF /* Main.storyboard */,
+				C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */,
+				C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */,
+				C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */,
 				34556BA11A9C58D8005635FF /* LoginViewController.swift */,
 				34556BA31A9C58EC005635FF /* MapViewController.swift */,
 				2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */,
@@ -245,6 +254,9 @@
 				2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */,
 				34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */,
 				34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */,
+				C080CCCE1AC34ACB00D7A2C9 /* BarFeedViewCell.swift in Sources */,
+				C080CCCA1AC3421C00D7A2C9 /* DistrictFeedViewCell.swift in Sources */,
+				C080CCCC1AC3482A00D7A2C9 /* BarFeedViewController.swift in Sources */,
 				34556BA41A9C58EC005635FF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
