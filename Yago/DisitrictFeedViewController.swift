@@ -6,22 +6,18 @@
 //  Copyright (c) 2015 Team Socket Power. All rights reserved.
 //
 
+import CoreData
+
 class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    var currentDistrict: String!
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    //Static bar names within a district
-    //var districtFeedArray: [AnyObject] = []
-    let venues = [
-        ("Pool Hall"),
-        ("Red Door Tavern"),
-        ("Dive Bar"),
-        ("Buckhead Saloon"),
-        ("The Ivy"),
-        ("Fado Irish Pub"),
-        ("The Southern Gentleman"),
-        ("Bucket Shop Cafe"),
-    ]
+    var districtId: NSInteger!
+    var districtName: NSString!
+    
+    var apiBaseUrl = "http://yago-stage.herokuapp.com/"
+    
+    var districtFeedArray: [DistrictFeedItem] = []
     
     //Hack to pass current bar selected
     var barName : AnyObject? {
@@ -37,7 +33,10 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     @IBOutlet weak var districtViewCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "\(currentDistrict) Venues"
+        self.title = "\(districtName) Venues"
+        
+        //TODO add request info here
+        getBars(districtId)
         
     }
     
@@ -52,8 +51,8 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return venues.count
-        //return districtFeedArray.count
+        //return venues.count
+        return districtFeedArray.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -61,38 +60,48 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
         
         var cell:DistrictFeedViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("district", forIndexPath: indexPath) as DistrictFeedViewCell
         
-        //Setting contents of custom cell
-        let barName = venues[indexPath.row]
-        cell.barNameLabel.text = barName
-        var myImage = UIImage(named: barName)
-        cell.barImage.image = UIImage(named: barName)
-        
         //Just borders to make cell look neat
         cell.layer.borderWidth = 0.3
         cell.layer.borderColor = UIColor .grayColor().CGColor
         
-        /*Grab what's in the array and set image and bar name
-        let thisItem = districtFeedArray[indexPath.row]
-        cell.barImage.image = UIImage(data: thisItem.image)
-        cell.barNameLabel.text = thisItem.caption
-        return cell
-        */
-        
-        //Placeholder
+        //Grab what's in the array and set image and bar name
+        let thisItem = districtFeedArray[indexPath.row] as DistrictFeedItem
+        let url = NSURL(string: thisItem.imageUrl)
+        let data = NSData(contentsOfURL: url!)
+        cell.barImage.image = UIImage(data: data!)
+        cell.barNameLabel.text = thisItem.name
         return cell
     }
     
     //This method is called everytime a cell is selected -> Use this to pass the current bar to the next screen
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        barName = venues[indexPath.row]
+        //barName = venues[indexPath.row]
+        
+        //TODO FIX THIS
     }
     
-    
-    
-    //Make Get Request
-    func makeGETRequest (searchString: String) {
-        //let url NSURL(string: <#String#>)
+    func getBars(districtId: Int) {
+        var districtFeedResults:[DistrictFeedItem] = []
+        let manager = AFHTTPRequestOperationManager()
+        manager.GET( apiBaseUrl + "feed/district_feed/\(districtId)",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                if let items = responseObject as? NSArray {
+                    for item in items {
+                        var feedItem:DistrictFeedItem = DistrictFeedItem()
+                        feedItem.name = item["name"] as String
+                        feedItem.imageUrl = item["logo_url"] as String
+                        districtFeedResults += [feedItem]
+                    }
+                }
+                self.districtFeedArray = districtFeedResults
+                self.collectionView.reloadData()
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+        })
     }
+    
     
     //If you need to pass something to the next screen
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

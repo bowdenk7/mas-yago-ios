@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28492AE61AC3D5B700F3BB3F /* Yago.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28492AE41AC3D5B700F3BB3F /* Yago.xcdatamodeld */; };
+		28492AE81AC3D66F00F3BB3F /* DistrictFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28492AE71AC3D66F00F3BB3F /* DistrictFeedItem.swift */; };
 		2853BB8F1AA4D19600F44668 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2853BA741AA4D19500F44668 /* FacebookSDK.framework */; };
 		2853BC691AABA88800F44668 /* BarDistrictAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */; };
 		2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */; };
@@ -18,6 +20,7 @@
 		34556B9C1A9C5520005635FF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 34556B9B1A9C5520005635FF /* MapKit.framework */; };
 		34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556BA11A9C58D8005635FF /* LoginViewController.swift */; };
 		34556BA41A9C58EC005635FF /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556BA31A9C58EC005635FF /* MapViewController.swift */; };
+		A2EF83AA59B4E7CF2CA9A3A3 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F70BC1C1ECF2B8AFEF62042 /* libPods.a */; };
 		C080CCCA1AC3421C00D7A2C9 /* DistrictFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */; };
 		C080CCCC1AC3482A00D7A2C9 /* BarFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */; };
 		C080CCCE1AC34ACB00D7A2C9 /* BarFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */; };
@@ -34,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28492AE51AC3D5B700F3BB3F /* Yago.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Yago.xcdatamodel; sourceTree = "<group>"; };
+		28492AE71AC3D66F00F3BB3F /* DistrictFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DistrictFeedItem.swift; path = ../DistrictFeedItem.swift; sourceTree = "<group>"; };
 		2853BA741AA4D19500F44668 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		2853BC621AA4D60200F44668 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDistrictAnnotation.swift; sourceTree = "<group>"; };
@@ -50,9 +55,12 @@
 		34556B9B1A9C5520005635FF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		34556BA11A9C58D8005635FF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../LoginViewController.swift; sourceTree = "<group>"; };
 		34556BA31A9C58EC005635FF /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapViewController.swift; path = ../MapViewController.swift; sourceTree = "<group>"; };
+		4C2656D6BAB26FEFE6418BAA /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		8F70BC1C1ECF2B8AFEF62042 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictFeedViewCell.swift; sourceTree = "<group>"; };
 		C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFeedViewController.swift; sourceTree = "<group>"; };
 		C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFeedViewCell.swift; sourceTree = "<group>"; };
+		C801A264299E3378A8AA7E3A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +70,7 @@
 			files = (
 				34556B9C1A9C5520005635FF /* MapKit.framework in Frameworks */,
 				2853BB8F1AA4D19600F44668 /* FacebookSDK.framework in Frameworks */,
+				A2EF83AA59B4E7CF2CA9A3A3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +98,8 @@
 				34556B9B1A9C5520005635FF /* MapKit.framework */,
 				34556B781A9C5512005635FF /* Yago */,
 				34556B771A9C5512005635FF /* Products */,
+				52749AB7EF248305B691FB77 /* Pods */,
+				535D1030D46C7E02CBF504EA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -105,12 +116,14 @@
 			isa = PBXGroup;
 			children = (
 				34556B7F1A9C5512005635FF /* Main.storyboard */,
+				28492AE41AC3D5B700F3BB3F /* Yago.xcdatamodeld */,
 				C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */,
 				C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */,
+				28492AE71AC3D66F00F3BB3F /* DistrictFeedItem.swift */,
 				C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */,
+				2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */,
 				34556BA11A9C58D8005635FF /* LoginViewController.swift */,
 				34556BA31A9C58EC005635FF /* MapViewController.swift */,
-				2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */,
 				34556B7B1A9C5512005635FF /* AppDelegate.swift */,
 				2853BC631AAB95F200F44668 /* Model */,
 				34556B821A9C5512005635FF /* Images.xcassets */,
@@ -148,6 +161,23 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		52749AB7EF248305B691FB77 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C801A264299E3378A8AA7E3A /* Pods.debug.xcconfig */,
+				4C2656D6BAB26FEFE6418BAA /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		535D1030D46C7E02CBF504EA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8F70BC1C1ECF2B8AFEF62042 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -155,9 +185,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 34556B951A9C5512005635FF /* Build configuration list for PBXNativeTarget "Yago" */;
 			buildPhases = (
+				3B5443047DE0D8BEE88F1A0A /* Check Pods Manifest.lock */,
 				34556B721A9C5512005635FF /* Sources */,
 				34556B731A9C5512005635FF /* Frameworks */,
 				34556B741A9C5512005635FF /* Resources */,
+				4220FC1DAC17F7B3F97CC9FC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -245,6 +277,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3B5443047DE0D8BEE88F1A0A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4220FC1DAC17F7B3F97CC9FC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		34556B721A9C5512005635FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -255,8 +320,10 @@
 				34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */,
 				34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */,
 				C080CCCE1AC34ACB00D7A2C9 /* BarFeedViewCell.swift in Sources */,
+				28492AE61AC3D5B700F3BB3F /* Yago.xcdatamodeld in Sources */,
 				C080CCCA1AC3421C00D7A2C9 /* DistrictFeedViewCell.swift in Sources */,
 				C080CCCC1AC3482A00D7A2C9 /* BarFeedViewController.swift in Sources */,
+				28492AE81AC3D66F00F3BB3F /* DistrictFeedItem.swift in Sources */,
 				34556BA41A9C58EC005635FF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -378,6 +445,7 @@
 		};
 		34556B961A9C5512005635FF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C801A264299E3378A8AA7E3A /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer: William Kelly (FN7KX655G7)";
@@ -394,6 +462,7 @@
 		};
 		34556B971A9C5512005635FF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C2656D6BAB26FEFE6418BAA /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -472,6 +541,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		28492AE41AC3D5B700F3BB3F /* Yago.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				28492AE51AC3D5B700F3BB3F /* Yago.xcdatamodel */,
+			);
+			currentVersion = 28492AE51AC3D5B700F3BB3F /* Yago.xcdatamodel */;
+			path = Yago.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 34556B6E1A9C5512005635FF /* Project object */;
 }
