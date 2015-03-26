@@ -15,17 +15,17 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     var districtId: NSInteger!
     var districtName: NSString!
     
-    var apiBaseUrl = "http://yago-stage.herokuapp.com/"
+    var API_BASE_URL = "http://yago-stage.herokuapp.com/"
     
     var districtFeedArray: [DistrictFeedItem] = []
     
     //Hack to pass current bar selected
-    var barName : AnyObject? {
+    var barId : Int? {
         get{
-            return NSUserDefaults.standardUserDefaults().objectForKey("barName")
+            return NSUserDefaults.standardUserDefaults().objectForKey("barId") as? Int
         }
         set {
-            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "barName")
+            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "barId")
             NSUserDefaults.standardUserDefaults().synchronize()
         }
     }
@@ -75,7 +75,7 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     
     //This method is called everytime a cell is selected -> Use this to pass the current bar to the next screen
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        //barName = venues[indexPath.row]
+        barId = districtFeedArray[indexPath.row].id
         
         //TODO FIX THIS
     }
@@ -83,7 +83,7 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     func getBars(districtId: Int) {
         var districtFeedResults:[DistrictFeedItem] = []
         let manager = AFHTTPRequestOperationManager()
-        manager.GET( apiBaseUrl + "feed/district_feed/\(districtId)",
+        manager.GET( API_BASE_URL + "feed/district_feed/\(districtId)",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
@@ -91,6 +91,7 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
                         var feedItem:DistrictFeedItem = DistrictFeedItem()
                         feedItem.name = item["name"] as String
                         feedItem.imageUrl = item["logo_url"] as String
+                        feedItem.id = item["pk"] as Int
                         districtFeedResults += [feedItem]
                     }
                 }

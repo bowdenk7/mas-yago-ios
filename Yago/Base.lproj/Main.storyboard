@@ -425,7 +425,7 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="BarFeedCollection" destination="sSE-jC-fx4" id="OlZ-sG-CT2"/>
+                        <outlet property="collectionView" destination="sSE-jC-fx4" id="xqO-QC-3NF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wat-2o-Nf5" userLabel="First Responder" sceneMemberID="firstResponder"/>

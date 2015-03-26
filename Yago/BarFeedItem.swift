@@ -8,10 +8,11 @@
 
 import Foundation
 
-class DistrictFeedItem {
-
-    var id: Int = 0
+class BarFeedItem {
+    
     var name: String = ""
     var imageUrl: String = ""
-
+    var likes: Int = 0
+    var id: Int = 0
+    
 }

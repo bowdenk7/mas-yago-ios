@@ -12,6 +12,7 @@
 		2853BB8F1AA4D19600F44668 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2853BA741AA4D19500F44668 /* FacebookSDK.framework */; };
 		2853BC691AABA88800F44668 /* BarDistrictAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */; };
 		2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */; };
+		28F0F9E31AC429C9003A2A85 /* BarFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0F9E21AC429C9003A2A85 /* BarFeedItem.swift */; };
 		34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556B7B1A9C5512005635FF /* AppDelegate.swift */; };
 		34556B811A9C5512005635FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34556B7F1A9C5512005635FF /* Main.storyboard */; };
 		34556B831A9C5512005635FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34556B821A9C5512005635FF /* Images.xcassets */; };
@@ -43,6 +44,7 @@
 		2853BC621AA4D60200F44668 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDistrictAnnotation.swift; sourceTree = "<group>"; };
 		2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisitrictFeedViewController.swift; sourceTree = "<group>"; };
+		28F0F9E21AC429C9003A2A85 /* BarFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFeedItem.swift; sourceTree = "<group>"; };
 		34556B761A9C5512005635FF /* Yago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34556B7A1A9C5512005635FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34556B7B1A9C5512005635FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 			children = (
 				34556B7F1A9C5512005635FF /* Main.storyboard */,
 				28492AE41AC3D5B700F3BB3F /* Yago.xcdatamodeld */,
+				28F0F9E21AC429C9003A2A85 /* BarFeedItem.swift */,
 				C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */,
 				C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */,
 				28492AE71AC3D66F00F3BB3F /* DistrictFeedItem.swift */,
@@ -317,6 +320,7 @@
 			files = (
 				2853BC691AABA88800F44668 /* BarDistrictAnnotation.swift in Sources */,
 				2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */,
+				28F0F9E31AC429C9003A2A85 /* BarFeedItem.swift in Sources */,
 				34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */,
 				34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */,
 				C080CCCE1AC34ACB00D7A2C9 /* BarFeedViewCell.swift in Sources */,

@@ -10,18 +10,44 @@ import UIKit
 
 class BarFeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
-    @IBOutlet weak var BarFeedCollection: UICollectionView!
+    @IBOutlet weak var collectionView: UICollectionView!
     
-    let agos = ["1hr", "2hr", "3hr", "4hr", "5hr"]
-    let likes = [ "12", "7", "6", "13", "15" ]
-    let pictureIDs = ["1", "2", "3", "4", "5"]
+    var API_BASE_URL = "http://yago-stage.herokuapp.com/"
+    
+    var barFeedArray: [BarFeedItem] = []
     
     var currentBar: String!
     
-    var barName : AnyObject? {
+    var barId : Int? {
         get {
-            return NSUserDefaults.standardUserDefaults().objectForKey("barName")
+            return NSUserDefaults.standardUserDefaults().objectForKey("barId") as? Int
         }
+    }
+    
+    func getPosts(barId: Int) {
+        var barFeedResults:[BarFeedItem] = []
+        let manager = AFHTTPRequestOperationManager()
+        manager.GET( API_BASE_URL + "feed/bar_feed/\(barId)",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                if let items = responseObject as? NSArray {
+                    for item in items {
+                        var feedItem:BarFeedItem = BarFeedItem()
+                        //feedItem.name = item["name"] as String
+                        feedItem.imageUrl = item["image_url"] as String
+                        println(item["image_url"])
+                        println("")
+                        println(feedItem.imageUrl)
+                        feedItem.id = item["id"] as Int
+                        barFeedResults += [feedItem]
+                    }
+                }
+                self.barFeedArray = barFeedResults
+                self.collectionView.reloadData()
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+        })
     }
 
     
@@ -29,8 +55,8 @@ class BarFeedViewController: UIViewController, UICollectionViewDataSource, UICol
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        currentBar = barName as String
-        self.title = currentBar
+        getPosts(barId!)
+        self.title = "Some Bar" //TODO fix this, request bar info or pass from last view
     }
 
     override func didReceiveMemoryWarning() {
@@ -56,8 +82,7 @@ class BarFeedViewController: UIViewController, UICollectionViewDataSource, UICol
     }
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return likes.count
-        //return districtFeedArray.count
+        return barFeedArray.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -66,20 +91,15 @@ class BarFeedViewController: UIViewController, UICollectionViewDataSource, UICol
         var cell:BarFeedViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("bar", forIndexPath: indexPath) as BarFeedViewCell
         
         //Configuring collection cell
-        var imageID:String = currentBar  + pictureIDs[indexPath.row]
-        cell.timestamp.text = agos[indexPath.row]
-        cell.withinBarImage.image = UIImage(named: imageID)
-        cell.likeCount.text = likes[indexPath.row]
         cell.layer.borderWidth = 0.3
         cell.layer.borderColor = UIColor .grayColor().CGColor
         
-        
-        /*Grab what's in the array and set image
-        let thisItem = districtFeedArray[indexPath.row]
-        cell.barImage.image = UIImage(data: thisItem.image)
-        cell.barNameLabel.text = thisItem.caption
-        return cell
-        */
+        //Grab what's in the array and set image
+        let thisItem = barFeedArray[indexPath.row] as BarFeedItem
+        let url = NSURL(string: thisItem.imageUrl.stringByAddingPercentEscapesUsingEncoding(NSStringEncoding())!)
+        let data = NSData(contentsOfURL: url!)
+        cell.withinBarImage.image = UIImage(data: data!)
+        cell.likeCount.text = String(thisItem.likes)
         
         return cell
     }
