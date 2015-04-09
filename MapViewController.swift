@@ -74,15 +74,17 @@ class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewD
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         if let annotation = view.annotation as? BarDistrictAnnotation {
-            self.performSegueWithIdentifier("FeedSelected", sender: nil)
+            self.performSegueWithIdentifier("DistrictFeedSelected", sender: nil)
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nextScene = segue.destinationViewController as DistrictFeedViewController
-        //For now
-        nextScene.districtId = 1
-        nextScene.districtName = "Buckhead"
+        if segue.identifier == "DistrictFeedSelected" {
+            let nextScene = segue.destinationViewController as DistrictFeedViewController
+            //For now
+            let selectedDistrict = DistrictModel(id: 1, name: "Buckhead")
+            nextScene.currentDistrict = selectedDistrict
+        }
     }
     
     

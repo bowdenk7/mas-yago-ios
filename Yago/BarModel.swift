@@ -8,10 +8,16 @@
 
 import Foundation
 
-class DistrictFeedItem {
-
-    var id: Int = 0
+class BarModel {
+    
     var name: String = ""
     var imageUrl: String = ""
-
+    var id: Int = 0
+    
+    init(name: String, imageUrl: String, id: Int) {
+        self.name = name
+        self.imageUrl = imageUrl
+        self.id = id
+    }
+    
 }

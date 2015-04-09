@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		28492AE61AC3D5B700F3BB3F /* Yago.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28492AE41AC3D5B700F3BB3F /* Yago.xcdatamodeld */; };
-		28492AE81AC3D66F00F3BB3F /* DistrictFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28492AE71AC3D66F00F3BB3F /* DistrictFeedItem.swift */; };
+		28492AE81AC3D66F00F3BB3F /* DistrictModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28492AE71AC3D66F00F3BB3F /* DistrictModel.swift */; };
 		2853BB8F1AA4D19600F44668 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2853BA741AA4D19500F44668 /* FacebookSDK.framework */; };
 		2853BC691AABA88800F44668 /* BarDistrictAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */; };
 		2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */; };
-		28F0F9E31AC429C9003A2A85 /* BarFeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0F9E21AC429C9003A2A85 /* BarFeedItem.swift */; };
+		288578901AD4C7DC00008481 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885788F1AD4C7DC00008481 /* PostModel.swift */; };
+		28F0F9E31AC429C9003A2A85 /* BarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0F9E21AC429C9003A2A85 /* BarModel.swift */; };
 		34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556B7B1A9C5512005635FF /* AppDelegate.swift */; };
 		34556B811A9C5512005635FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34556B7F1A9C5512005635FF /* Main.storyboard */; };
 		34556B831A9C5512005635FF /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34556B821A9C5512005635FF /* Images.xcassets */; };
@@ -39,12 +40,13 @@
 
 /* Begin PBXFileReference section */
 		28492AE51AC3D5B700F3BB3F /* Yago.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Yago.xcdatamodel; sourceTree = "<group>"; };
-		28492AE71AC3D66F00F3BB3F /* DistrictFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DistrictFeedItem.swift; path = ../DistrictFeedItem.swift; sourceTree = "<group>"; };
+		28492AE71AC3D66F00F3BB3F /* DistrictModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DistrictModel.swift; path = ../DistrictModel.swift; sourceTree = "<group>"; };
 		2853BA741AA4D19500F44668 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = FacebookSDK/FacebookSDK.framework; sourceTree = "<group>"; };
 		2853BC621AA4D60200F44668 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDistrictAnnotation.swift; sourceTree = "<group>"; };
 		2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisitrictFeedViewController.swift; sourceTree = "<group>"; };
-		28F0F9E21AC429C9003A2A85 /* BarFeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFeedItem.swift; sourceTree = "<group>"; };
+		2885788F1AD4C7DC00008481 /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
+		28F0F9E21AC429C9003A2A85 /* BarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarModel.swift; sourceTree = "<group>"; };
 		34556B761A9C5512005635FF /* Yago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34556B7A1A9C5512005635FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		34556B7B1A9C5512005635FF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -86,11 +88,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2853BC631AAB95F200F44668 /* Model */ = {
+		2853BC631AAB95F200F44668 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				28F0F9E21AC429C9003A2A85 /* BarModel.swift */,
+				28492AE71AC3D66F00F3BB3F /* DistrictModel.swift */,
+				2885788F1AD4C7DC00008481 /* PostModel.swift */,
 			);
-			name = Model;
+			name = Models;
+			sourceTree = "<group>";
+		};
+		2885788D1AD4C45900008481 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				34556BA11A9C58D8005635FF /* LoginViewController.swift */,
+				34556BA31A9C58EC005635FF /* MapViewController.swift */,
+				2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */,
+				C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		2885788E1AD4C47900008481 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */,
+				C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		34556B6D1A9C5512005635FF = {
@@ -119,16 +144,10 @@
 			children = (
 				34556B7F1A9C5512005635FF /* Main.storyboard */,
 				28492AE41AC3D5B700F3BB3F /* Yago.xcdatamodeld */,
-				28F0F9E21AC429C9003A2A85 /* BarFeedItem.swift */,
-				C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */,
-				C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */,
-				28492AE71AC3D66F00F3BB3F /* DistrictFeedItem.swift */,
-				C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */,
-				2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */,
-				34556BA11A9C58D8005635FF /* LoginViewController.swift */,
-				34556BA31A9C58EC005635FF /* MapViewController.swift */,
 				34556B7B1A9C5512005635FF /* AppDelegate.swift */,
-				2853BC631AAB95F200F44668 /* Model */,
+				2885788E1AD4C47900008481 /* Views */,
+				2885788D1AD4C45900008481 /* Controllers */,
+				2853BC631AAB95F200F44668 /* Models */,
 				34556B821A9C5512005635FF /* Images.xcassets */,
 				34556B841A9C5512005635FF /* LaunchScreen.xib */,
 				34556B791A9C5512005635FF /* Supporting Files */,
@@ -319,15 +338,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				2853BC691AABA88800F44668 /* BarDistrictAnnotation.swift in Sources */,
+				288578901AD4C7DC00008481 /* PostModel.swift in Sources */,
 				2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */,
-				28F0F9E31AC429C9003A2A85 /* BarFeedItem.swift in Sources */,
+				28F0F9E31AC429C9003A2A85 /* BarModel.swift in Sources */,
 				34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */,
 				34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */,
 				C080CCCE1AC34ACB00D7A2C9 /* BarFeedViewCell.swift in Sources */,
 				28492AE61AC3D5B700F3BB3F /* Yago.xcdatamodeld in Sources */,
 				C080CCCA1AC3421C00D7A2C9 /* DistrictFeedViewCell.swift in Sources */,
 				C080CCCC1AC3482A00D7A2C9 /* BarFeedViewController.swift in Sources */,
-				28492AE81AC3D66F00F3BB3F /* DistrictFeedItem.swift in Sources */,
+				28492AE81AC3D66F00F3BB3F /* DistrictModel.swift in Sources */,
 				34556BA41A9C58EC005635FF /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

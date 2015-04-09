@@ -175,7 +175,7 @@
                                     <rect key="frame" x="149" y="506" width="102" height="30"/>
                                 </variation>
                                 <connections>
-                                    <segue destination="Yku-DF-Ee3" kind="show" id="lTN-g6-0jS"/>
+                                    <segue destination="Yku-DF-Ee3" kind="show" identifier="DistrictFeedSelected" id="lTN-g6-0jS"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -265,7 +265,7 @@
                                         <connections>
                                             <outlet property="barImage" destination="KFg-7e-EEb" id="IXY-ZI-ZFF"/>
                                             <outlet property="barNameLabel" destination="QNa-F3-Wbo" id="f2R-a5-mmp"/>
-                                            <segue destination="Rag-Cw-GmY" kind="show" id="zIF-Ur-BQc"/>
+                                            <segue destination="Rag-Cw-GmY" kind="show" identifier="BarFeedSelected" id="zIF-Ur-BQc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>

@@ -8,11 +8,14 @@
 
 import Foundation
 
-class BarFeedItem {
-    
-    var name: String = ""
-    var imageUrl: String = ""
-    var likes: Int = 0
+class DistrictModel {
+
     var id: Int = 0
+    var name: String = ""
+
+    init(id: Int, name: String) {
+        self.id = id
+        self.name = name
+    }
     
 }

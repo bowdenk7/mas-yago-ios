@@ -6,18 +6,15 @@
 //  Copyright (c) 2015 Team Socket Power. All rights reserved.
 //
 
-import CoreData
-
 class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
-    var districtId: NSInteger!
-    var districtName: NSString!
+    var currentDistrict: DistrictModel!
     
     var API_BASE_URL = "http://yago-stage.herokuapp.com/"
     
-    var districtFeedArray: [DistrictFeedItem] = []
+    var districtFeedArray: [BarModel] = []
     
     //Hack to pass current bar selected
     var barId : Int? {
@@ -33,10 +30,10 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     @IBOutlet weak var districtViewCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "\(districtName) Venues"
+        self.title = "\(currentDistrict.name) Venues"
         
         //TODO add request info here
-        getBars(districtId)
+        getBars(currentDistrict.id)
         
     }
     
@@ -65,7 +62,7 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
         cell.layer.borderColor = UIColor .grayColor().CGColor
         
         //Grab what's in the array and set image and bar name
-        let thisItem = districtFeedArray[indexPath.row] as DistrictFeedItem
+        let thisItem = districtFeedArray[indexPath.row] as BarModel
         let url = NSURL(string: thisItem.imageUrl)
         let data = NSData(contentsOfURL: url!)
         cell.barImage.image = UIImage(data: data!)
@@ -81,17 +78,16 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     }
     
     func getBars(districtId: Int) {
-        var districtFeedResults:[DistrictFeedItem] = []
+        var districtFeedResults:[BarModel] = []
         let manager = AFHTTPRequestOperationManager()
         manager.GET( API_BASE_URL + "feed/district_feed/\(districtId)",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
                     for item in items {
-                        var feedItem:DistrictFeedItem = DistrictFeedItem()
-                        feedItem.name = item["name"] as String
-                        feedItem.imageUrl = item["logo_url"] as String
-                        feedItem.id = item["pk"] as Int
+                        var feedItem:BarModel = BarModel(name: item["name"] as String,
+                            imageUrl: item["logo_url"] as String,
+                            id: item["pk"] as Int)
                         districtFeedResults += [feedItem]
                     }
                 }
@@ -106,7 +102,9 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     
     //If you need to pass something to the next screen
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        let nextScene = segue.destinationViewController as BarFeedViewController
+        if segue.identifier == "BarFeedSelected" {
+            let nextScene = segue.destinationViewController as BarFeedViewController
+        }
     }
 
     
