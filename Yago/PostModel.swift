@@ -14,6 +14,12 @@ class PostModel {
     var likes: Int = 0
     var id: Int = 0
     
+    init() {
+        self.imageUrl = ""
+        self.likes = 0
+        self.id = 0
+    }
+    
     init(imageUrl: String, likes: Int, id: Int) {
         self.imageUrl = imageUrl
         self.likes = likes

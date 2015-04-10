@@ -47,19 +47,34 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         // Do any additional setup after loading the view.
     }
     
+    func facebookAuthWithAccessToken(token: String) {
+        let manager = AFHTTPRequestOperationManager()
+        manager.responseSerializer = AFJSONResponseSerializer()
+        var params : Dictionary = ["access_token": token]
+        println("Posting auth request")
+        manager.POST( API_BASE_URL + "account/register-by-token/",
+            parameters: params,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                println("Authenticated!")
+                println(responseObject)
+                self.performSegueWithIdentifier("UserAuthenticated", sender: nil)
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+        })
+    }
+
+    
     //Facebook Delegate messages
     
     func loginViewShowingLoggedInUser(loginView : FBLoginView!) {
-        println("User Logged In")
-        self.performSegueWithIdentifier("UserAuthenticated", sender: nil)
+        println("Facebook Access Token Received")
+        var accessToken = FBSession.activeSession().accessTokenData.accessToken
+        facebookAuthWithAccessToken(accessToken)
     }
     
     func loginViewFetchedUserInfo(loginView : FBLoginView!, user: FBGraphUser) {
-        println("User: \(user)")
-        println("User ID: \(user.objectID)")
-        println("User Name: \(user.name)")
-        var userEmail = user.objectForKey("email") as String
-        println("User Email: \(userEmail)")
+        
         
     }
     

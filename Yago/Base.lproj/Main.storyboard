@@ -265,7 +265,6 @@
                                         <connections>
                                             <outlet property="barImage" destination="KFg-7e-EEb" id="IXY-ZI-ZFF"/>
                                             <outlet property="barNameLabel" destination="QNa-F3-Wbo" id="f2R-a5-mmp"/>
-                                            <segue destination="Rag-Cw-GmY" kind="show" identifier="BarFeedSelected" id="zIF-Ur-BQc"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -293,6 +292,7 @@
                     <connections>
                         <outlet property="collectionView" destination="Q1C-m0-1yH" id="QtK-IJ-CYQ"/>
                         <outlet property="districtViewCollection" destination="Q1C-m0-1yH" id="O0z-82-Nuk"/>
+                        <segue destination="Rag-Cw-GmY" kind="show" identifier="BarFeedSelected" id="csW-cm-Fky"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t1V-E5-eeU" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -345,24 +345,13 @@
                                                         <rect key="frame" x="8" y="230" width="63" height="30"/>
                                                     </variation>
                                                 </button>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbM-SP-JJM">
-                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <state key="normal" title="Like">
-                                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                                    </state>
-                                                    <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="283" y="230" width="46" height="30"/>
-                                                    </variation>
-                                                </button>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Count" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifa-9c-9vn">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ifa-9c-9vn">
                                                     <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
-                                                        <rect key="frame" x="333" y="235" width="53" height="21"/>
+                                                        <rect key="frame" x="345" y="235" width="41" height="21"/>
                                                     </variation>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1 hr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qdx-15-w1j">
@@ -374,6 +363,19 @@
                                                         <rect key="frame" x="322" y="8" width="30" height="21"/>
                                                     </variation>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fbM-SP-JJM">
+                                                    <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <state key="normal" title="Like">
+                                                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <variation key="widthClass=compact" fixedFrame="YES">
+                                                        <rect key="frame" x="303" y="230" width="46" height="30"/>
+                                                    </variation>
+                                                    <connections>
+                                                        <action selector="likePressed:" destination="Vew-0S-Txh" eventType="touchUpInside" id="eOU-2s-rKq"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -382,21 +384,22 @@
                                             <mask key="subviews">
                                                 <exclude reference="ojb-uB-V9E"/>
                                                 <exclude reference="Rb8-TH-3jC"/>
-                                                <exclude reference="fbM-SP-JJM"/>
                                                 <exclude reference="ifa-9c-9vn"/>
                                                 <exclude reference="Qdx-15-w1j"/>
+                                                <exclude reference="fbM-SP-JJM"/>
                                             </mask>
                                         </variation>
                                         <variation key="widthClass=compact">
                                             <mask key="subviews">
                                                 <include reference="ojb-uB-V9E"/>
                                                 <include reference="Rb8-TH-3jC"/>
-                                                <include reference="fbM-SP-JJM"/>
                                                 <include reference="ifa-9c-9vn"/>
                                                 <include reference="Qdx-15-w1j"/>
+                                                <include reference="fbM-SP-JJM"/>
                                             </mask>
                                         </variation>
                                         <connections>
+                                            <outlet property="likeButton" destination="fbM-SP-JJM" id="iju-82-0Pf"/>
                                             <outlet property="likeCount" destination="ifa-9c-9vn" id="yyf-H0-3vQ"/>
                                             <outlet property="timestamp" destination="Qdx-15-w1j" id="LtN-Q4-dY4"/>
                                             <outlet property="withinBarImage" destination="ojb-uB-V9E" id="QKT-sY-WBS"/>
@@ -430,7 +433,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wat-2o-Nf5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5514" y="192"/>
+            <point key="canvasLocation" x="5514" y="198"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Yil-TY-vaJ">

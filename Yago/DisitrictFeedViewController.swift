@@ -11,26 +11,16 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     @IBOutlet weak var collectionView: UICollectionView!
     
     var currentDistrict: DistrictModel!
-    
-    var API_BASE_URL = "http://yago-stage.herokuapp.com/"
-    
+    var currentBar: BarModel!
     var districtFeedArray: [BarModel] = []
     
     //Hack to pass current bar selected
-    var barId : Int? {
-        get{
-            return NSUserDefaults.standardUserDefaults().objectForKey("barId") as? Int
-        }
-        set {
-            NSUserDefaults.standardUserDefaults().setObject(newValue, forKey: "barId")
-            NSUserDefaults.standardUserDefaults().synchronize()
-        }
-    }
     
     @IBOutlet weak var districtViewCollection: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "\(currentDistrict.name) Venues"
+        collectionView.registerClass(BarFeedViewCell.self, forCellWithReuseIdentifier: "PostCell")
         
         //TODO add request info here
         getBars(currentDistrict.id)
@@ -72,15 +62,14 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     
     //This method is called everytime a cell is selected -> Use this to pass the current bar to the next screen
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        barId = districtFeedArray[indexPath.row].id
-        
-        //TODO FIX THIS
+        currentBar = districtFeedArray[indexPath.row]
+        self.performSegueWithIdentifier("BarFeedSelected", sender: nil)
     }
     
     func getBars(districtId: Int) {
         var districtFeedResults:[BarModel] = []
         let manager = AFHTTPRequestOperationManager()
-        manager.GET( API_BASE_URL + "feed/district_feed/\(districtId)",
+        manager.GET( API_BASE_URL + "feed/top_district_feed/\(districtId)",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
@@ -104,6 +93,7 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "BarFeedSelected" {
             let nextScene = segue.destinationViewController as BarFeedViewController
+            nextScene.currentBar = currentBar
         }
     }
 
