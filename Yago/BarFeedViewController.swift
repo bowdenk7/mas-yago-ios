@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BarFeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class BarFeedViewController: CameraMenuItemController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -25,6 +25,7 @@ class BarFeedViewController: UIViewController, UICollectionViewDataSource, UICol
                     for item in items {
                         var feedItem:PostModel = PostModel(imageUrl: item["image_url"] as String,
                             likes: item["like__count"] as Int,
+                            timeText: item["time_text"] as String,
                             id: item["id"] as Int)
                         barFeedResults += [feedItem]
                     }
@@ -36,12 +37,9 @@ class BarFeedViewController: UIViewController, UICollectionViewDataSource, UICol
                 println("Error: " + error.localizedDescription)
         })
     }
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
         getPosts(currentBar.id)
         self.title = currentBar.name //TODO fix this, request bar info or pass from last view
     }
@@ -87,6 +85,7 @@ class BarFeedViewController: UIViewController, UICollectionViewDataSource, UICol
         let data = NSData(contentsOfURL: url!)
         cell.withinBarImage.image = UIImage(data: data!)
         cell.likeCount.text = String(thisItem.likes)
+        cell.timestamp.text = thisItem.timeText
         cell.post = thisItem
         
         return cell

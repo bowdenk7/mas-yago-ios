@@ -6,15 +6,13 @@
 //  Copyright (c) 2015 Team Socket Power. All rights reserved.
 //
 
-class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class DistrictFeedViewController: CameraMenuItemController, UICollectionViewDataSource, UICollectionViewDelegate {
     
     @IBOutlet weak var collectionView: UICollectionView!
     
     var currentDistrict: DistrictModel!
     var currentBar: BarModel!
     var districtFeedArray: [BarModel] = []
-    
-    //Hack to pass current bar selected
     
     @IBOutlet weak var districtViewCollection: UICollectionView!
     override func viewDidLoad() {
@@ -69,6 +67,7 @@ class DistrictFeedViewController: UIViewController, UICollectionViewDataSource, 
     func getBars(districtId: Int) {
         var districtFeedResults:[BarModel] = []
         let manager = AFHTTPRequestOperationManager()
+        println("Fetching districts")
         manager.GET( API_BASE_URL + "feed/top_district_feed/\(districtId)",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in

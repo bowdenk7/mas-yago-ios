@@ -9,6 +9,8 @@
 import UIKit
 
 var API_BASE_URL = "http://yago-stage.herokuapp.com/"
+//var API_BASE_URL = "http://localhost:8000/"
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

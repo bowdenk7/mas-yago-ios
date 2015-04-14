@@ -8,13 +8,13 @@
 
 import UIKit
 import MapKit
+import MobileCoreServices
 
-class MapViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
+class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MKMapViewDelegate, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager: CLLocationManager!
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

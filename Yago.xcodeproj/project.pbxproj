@@ -12,6 +12,12 @@
 		2853BB8F1AA4D19600F44668 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2853BA741AA4D19500F44668 /* FacebookSDK.framework */; };
 		2853BC691AABA88800F44668 /* BarDistrictAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */; };
 		2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */; };
+		28577CF31ADD7F9B0027262E /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28577CF21ADD7F9B0027262E /* NavigationController.swift */; };
+		28739CCF1ADC8D3100E5C174 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28739CCE1ADC8D3100E5C174 /* MobileCoreServices.framework */; };
+		28739CD11ADC8F2200E5C174 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28739CD01ADC8F2200E5C174 /* MobileCoreServices.framework */; };
+		28739CD31ADCC47F00E5C174 /* CameraMenuItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28739CD21ADCC47F00E5C174 /* CameraMenuItemController.swift */; };
+		28739CD51ADCEA6B00E5C174 /* CameraOverlay.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28739CD41ADCEA6B00E5C174 /* CameraOverlay.xib */; };
+		28739CD71ADCF70500E5C174 /* cameraOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28739CD61ADCF70500E5C174 /* cameraOverlay.swift */; };
 		288578901AD4C7DC00008481 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885788F1AD4C7DC00008481 /* PostModel.swift */; };
 		28F0F9E31AC429C9003A2A85 /* BarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0F9E21AC429C9003A2A85 /* BarModel.swift */; };
 		34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556B7B1A9C5512005635FF /* AppDelegate.swift */; };
@@ -45,6 +51,12 @@
 		2853BC621AA4D60200F44668 /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarDistrictAnnotation.swift; sourceTree = "<group>"; };
 		2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisitrictFeedViewController.swift; sourceTree = "<group>"; };
+		28577CF21ADD7F9B0027262E /* NavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		28739CCE1ADC8D3100E5C174 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		28739CD01ADC8F2200E5C174 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		28739CD21ADCC47F00E5C174 /* CameraMenuItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraMenuItemController.swift; sourceTree = "<group>"; };
+		28739CD41ADCEA6B00E5C174 /* CameraOverlay.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraOverlay.xib; sourceTree = "<group>"; };
+		28739CD61ADCF70500E5C174 /* cameraOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraOverlay.swift; sourceTree = "<group>"; };
 		2885788F1AD4C7DC00008481 /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		28F0F9E21AC429C9003A2A85 /* BarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarModel.swift; sourceTree = "<group>"; };
 		34556B761A9C5512005635FF /* Yago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yago.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -72,8 +84,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28739CCF1ADC8D3100E5C174 /* MobileCoreServices.framework in Frameworks */,
 				34556B9C1A9C5520005635FF /* MapKit.framework in Frameworks */,
 				2853BB8F1AA4D19600F44668 /* FacebookSDK.framework in Frameworks */,
+				28739CD11ADC8F2200E5C174 /* MobileCoreServices.framework in Frameworks */,
 				A2EF83AA59B4E7CF2CA9A3A3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -105,6 +119,8 @@
 				34556BA31A9C58EC005635FF /* MapViewController.swift */,
 				2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */,
 				C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */,
+				28739CD21ADCC47F00E5C174 /* CameraMenuItemController.swift */,
+				28577CF21ADD7F9B0027262E /* NavigationController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -114,6 +130,8 @@
 			children = (
 				C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */,
 				C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */,
+				28739CD41ADCEA6B00E5C174 /* CameraOverlay.xib */,
+				28739CD61ADCF70500E5C174 /* cameraOverlay.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -121,6 +139,7 @@
 		34556B6D1A9C5512005635FF = {
 			isa = PBXGroup;
 			children = (
+				28739CD01ADC8F2200E5C174 /* MobileCoreServices.framework */,
 				2853BA741AA4D19500F44668 /* FacebookSDK.framework */,
 				34556B9B1A9C5520005635FF /* MapKit.framework */,
 				34556B781A9C5512005635FF /* Yago */,
@@ -195,6 +214,7 @@
 		535D1030D46C7E02CBF504EA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				28739CCE1ADC8D3100E5C174 /* MobileCoreServices.framework */,
 				8F70BC1C1ECF2B8AFEF62042 /* libPods.a */,
 			);
 			name = Frameworks;
@@ -285,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				34556B811A9C5512005635FF /* Main.storyboard in Resources */,
+				28739CD51ADCEA6B00E5C174 /* CameraOverlay.xib in Resources */,
 				34556B861A9C5512005635FF /* LaunchScreen.xib in Resources */,
 				34556B831A9C5512005635FF /* Images.xcassets in Resources */,
 			);
@@ -344,11 +365,14 @@
 				34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */,
 				34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */,
 				C080CCCE1AC34ACB00D7A2C9 /* BarFeedViewCell.swift in Sources */,
+				28577CF31ADD7F9B0027262E /* NavigationController.swift in Sources */,
 				28492AE61AC3D5B700F3BB3F /* Yago.xcdatamodeld in Sources */,
+				28739CD31ADCC47F00E5C174 /* CameraMenuItemController.swift in Sources */,
 				C080CCCA1AC3421C00D7A2C9 /* DistrictFeedViewCell.swift in Sources */,
 				C080CCCC1AC3482A00D7A2C9 /* BarFeedViewController.swift in Sources */,
 				28492AE81AC3D66F00F3BB3F /* DistrictModel.swift in Sources */,
 				34556BA41A9C58EC005635FF /* MapViewController.swift in Sources */,
+				28739CD71ADCF70500E5C174 /* cameraOverlay.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
