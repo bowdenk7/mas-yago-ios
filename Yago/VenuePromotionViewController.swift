@@ -39,7 +39,7 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Promotions"
         var nib = UINib(nibName: "CustomPromotionTableViewCell", bundle:nil)
         promotionTableView.registerNib(nib, forCellReuseIdentifier: "promcustom")
         promotionTableView.separatorStyle = UITableViewCellSeparatorStyle.None
