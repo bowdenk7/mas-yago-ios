@@ -27,7 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            // FBSession.openActiveSessionWithReadPerm(false)
             
         }
+        let cache = NSURLCache(memoryCapacity: 8 * 1024 * 1024, diskCapacity: 20 * 1024 * 1024, diskPath: nil)
+        NSURLCache.setSharedURLCache(cache)
         return true
+    }
+    
+    func applicationDidReceiveMemoryWarning(application: UIApplication) {
+        NSURLCache.sharedURLCache().removeAllCachedResponses()
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: NSString?, annotation: AnyObject) -> Bool {
