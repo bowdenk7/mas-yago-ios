@@ -10,9 +10,15 @@ import Foundation
 
 class PromotionModel {
     var promotionName: String = ""
-    var promotion_type: String = ""
-    var venue: String = ""
-    var yagoValue: Int = 0
-    //var promotionID: Int= 0
-    //var barID: Int = 0
+    var venueName: String = ""
+    var pointCost: Int = 0
+    var address: String = ""
+    var openTimes: String = ""
+    
+    init(promotionName: String, venueName: String, pointCost: Int) {
+        self.promotionName = promotionName
+        self.venueName = venueName
+        self.pointCost = pointCost
+    }
+    
 }

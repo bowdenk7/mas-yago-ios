@@ -23,10 +23,10 @@ class BarFeedViewController: CameraMenuItemController, UICollectionViewDataSourc
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
                     for item in items {
-                        var feedItem:PostModel = PostModel(imageUrl: item["image_url"] as String,
-                            likes: item["like__count"] as Int,
-                            timeText: item["time_text"] as String,
-                            id: item["id"] as Int)
+                        var feedItem:PostModel = PostModel(imageUrl: item["image_url"] as! String,
+                            likes: item["like__count"] as! Int,
+                            timeText: item["time_text"] as! String,
+                            id: item["id"] as! Int)
                         barFeedResults += [feedItem]
                     }
                 }
@@ -73,7 +73,7 @@ class BarFeedViewController: CameraMenuItemController, UICollectionViewDataSourc
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
         
-        var cell:BarFeedViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("bar", forIndexPath: indexPath) as BarFeedViewCell
+        var cell:BarFeedViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("bar", forIndexPath: indexPath) as! BarFeedViewCell
         
         //Configuring collection cell
         cell.layer.borderWidth = 0.3

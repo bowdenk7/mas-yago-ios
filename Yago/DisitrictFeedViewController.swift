@@ -43,7 +43,7 @@ class DistrictFeedViewController: CameraMenuItemController, UICollectionViewData
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         
-        var cell:DistrictFeedViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("district", forIndexPath: indexPath) as DistrictFeedViewCell
+        var cell:DistrictFeedViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("district", forIndexPath: indexPath) as! DistrictFeedViewCell
         
         //Just borders to make cell look neat
         cell.layer.borderWidth = 0.3
@@ -73,9 +73,9 @@ class DistrictFeedViewController: CameraMenuItemController, UICollectionViewData
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
                     for item in items {
-                        var feedItem:BarModel = BarModel(name: item["name"] as String,
-                            imageUrl: item["logo_url"] as String,
-                            id: item["pk"] as Int)
+                        var feedItem:BarModel = BarModel(name: item["name"]as! String,
+                            imageUrl: item["logo_url"] as! String,
+                            id: item["pk"] as! Int)
                         districtFeedResults += [feedItem]
                     }
                 }
@@ -91,7 +91,7 @@ class DistrictFeedViewController: CameraMenuItemController, UICollectionViewData
     //If you need to pass something to the next screen
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "BarFeedSelected" {
-            let nextScene = segue.destinationViewController as BarFeedViewController
+            let nextScene = segue.destinationViewController as! BarFeedViewController
             nextScene.currentBar = currentBar
         }
     }
