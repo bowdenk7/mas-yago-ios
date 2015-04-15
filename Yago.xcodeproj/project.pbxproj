@@ -33,6 +33,7 @@
 		C086E7641ADE0FBC00E10601 /* PromotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086E7631ADE0FBC00E10601 /* PromotionModel.swift */; };
 		C086E76C1ADE28CF00E10601 /* VenuePromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086E76B1ADE28CF00E10601 /* VenuePromotionViewController.swift */; };
 		C086E76E1ADE38EA00E10601 /* CustomPromotionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086E76D1ADE38E900E10601 /* CustomPromotionTableViewCell.xib */; };
+		C0CFFA731ADED9B300F4DF67 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CFFA721ADED9B300F4DF67 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,7 @@
 		C086E7631ADE0FBC00E10601 /* PromotionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionModel.swift; sourceTree = "<group>"; };
 		C086E76B1ADE28CF00E10601 /* VenuePromotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuePromotionViewController.swift; sourceTree = "<group>"; };
 		C086E76D1ADE38E900E10601 /* CustomPromotionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPromotionTableViewCell.xib; sourceTree = "<group>"; };
+		C0CFFA721ADED9B300F4DF67 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C801A264299E3378A8AA7E3A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -118,6 +120,7 @@
 		2885788D1AD4C45900008481 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C0CFFA721ADED9B300F4DF67 /* ProfileViewController.swift */,
 				C086E76B1ADE28CF00E10601 /* VenuePromotionViewController.swift */,
 				34556BA11A9C58D8005635FF /* LoginViewController.swift */,
 				34556BA31A9C58EC005635FF /* MapViewController.swift */,
@@ -368,6 +371,7 @@
 				28F0F9E31AC429C9003A2A85 /* BarModel.swift in Sources */,
 				C086E76C1ADE28CF00E10601 /* VenuePromotionViewController.swift in Sources */,
 				34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */,
+				C0CFFA731ADED9B300F4DF67 /* ProfileViewController.swift in Sources */,
 				34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */,
 				28577CF51ADDE9D10027262E /* VenueSelectionController.swift in Sources */,
 				C086E7641ADE0FBC00E10601 /* PromotionModel.swift in Sources */,
