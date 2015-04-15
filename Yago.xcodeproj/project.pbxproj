@@ -14,7 +14,6 @@
 		2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */; };
 		28577CF51ADDE9D10027262E /* VenueSelectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28577CF41ADDE9D10027262E /* VenueSelectionController.swift */; };
 		28739CCF1ADC8D3100E5C174 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28739CCE1ADC8D3100E5C174 /* MobileCoreServices.framework */; };
-		28739CD11ADC8F2200E5C174 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28739CD01ADC8F2200E5C174 /* MobileCoreServices.framework */; };
 		28739CD31ADCC47F00E5C174 /* CameraMenuItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28739CD21ADCC47F00E5C174 /* CameraMenuItemController.swift */; };
 		28739CD71ADCF70500E5C174 /* cameraOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28739CD61ADCF70500E5C174 /* cameraOverlay.swift */; };
 		288578901AD4C7DC00008481 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885788F1AD4C7DC00008481 /* PostModel.swift */; };
@@ -31,6 +30,9 @@
 		C080CCCA1AC3421C00D7A2C9 /* DistrictFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */; };
 		C080CCCC1AC3482A00D7A2C9 /* BarFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */; };
 		C080CCCE1AC34ACB00D7A2C9 /* BarFeedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */; };
+		C086E7641ADE0FBC00E10601 /* PromotionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086E7631ADE0FBC00E10601 /* PromotionModel.swift */; };
+		C086E76C1ADE28CF00E10601 /* VenuePromotionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C086E76B1ADE28CF00E10601 /* VenuePromotionViewController.swift */; };
+		C086E76E1ADE38EA00E10601 /* CustomPromotionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C086E76D1ADE38E900E10601 /* CustomPromotionTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +76,9 @@
 		C080CCC91AC3421C00D7A2C9 /* DistrictFeedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DistrictFeedViewCell.swift; sourceTree = "<group>"; };
 		C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFeedViewController.swift; sourceTree = "<group>"; };
 		C080CCCD1AC34ACB00D7A2C9 /* BarFeedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarFeedViewCell.swift; sourceTree = "<group>"; };
+		C086E7631ADE0FBC00E10601 /* PromotionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionModel.swift; sourceTree = "<group>"; };
+		C086E76B1ADE28CF00E10601 /* VenuePromotionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VenuePromotionViewController.swift; sourceTree = "<group>"; };
+		C086E76D1ADE38E900E10601 /* CustomPromotionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomPromotionTableViewCell.xib; sourceTree = "<group>"; };
 		C801A264299E3378A8AA7E3A /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -85,7 +90,6 @@
 				28739CCF1ADC8D3100E5C174 /* MobileCoreServices.framework in Frameworks */,
 				34556B9C1A9C5520005635FF /* MapKit.framework in Frameworks */,
 				2853BB8F1AA4D19600F44668 /* FacebookSDK.framework in Frameworks */,
-				28739CD11ADC8F2200E5C174 /* MobileCoreServices.framework in Frameworks */,
 				A2EF83AA59B4E7CF2CA9A3A3 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +110,7 @@
 				28F0F9E21AC429C9003A2A85 /* BarModel.swift */,
 				28492AE71AC3D66F00F3BB3F /* DistrictModel.swift */,
 				2885788F1AD4C7DC00008481 /* PostModel.swift */,
+				C086E7631ADE0FBC00E10601 /* PromotionModel.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -113,6 +118,7 @@
 		2885788D1AD4C45900008481 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C086E76B1ADE28CF00E10601 /* VenuePromotionViewController.swift */,
 				34556BA11A9C58D8005635FF /* LoginViewController.swift */,
 				34556BA31A9C58EC005635FF /* MapViewController.swift */,
 				2853BC6D1AABAE4400F44668 /* DisitrictFeedViewController.swift */,
@@ -170,6 +176,7 @@
 				2853BC621AA4D60200F44668 /* Bridging-Header.h */,
 				2853BC681AABA88800F44668 /* BarDistrictAnnotation.swift */,
 				34556B8E1A9C5512005635FF /* YagoTests */,
+				C086E76D1ADE38E900E10601 /* CustomPromotionTableViewCell.xib */,
 			);
 			path = Yago;
 			sourceTree = "<group>";
@@ -263,7 +270,7 @@
 		34556B6E1A9C5512005635FF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 0620;
 				ORGANIZATIONNAME = "Team Socket Power";
 				TargetAttributes = {
 					34556B751A9C5512005635FF = {
@@ -301,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C086E76E1ADE38EA00E10601 /* CustomPromotionTableViewCell.xib in Resources */,
 				34556B811A9C5512005635FF /* Main.storyboard in Resources */,
 				34556B861A9C5512005635FF /* LaunchScreen.xib in Resources */,
 				34556B831A9C5512005635FF /* Images.xcassets in Resources */,
@@ -358,9 +366,11 @@
 				288578901AD4C7DC00008481 /* PostModel.swift in Sources */,
 				2853BC6E1AABAE4400F44668 /* DisitrictFeedViewController.swift in Sources */,
 				28F0F9E31AC429C9003A2A85 /* BarModel.swift in Sources */,
+				C086E76C1ADE28CF00E10601 /* VenuePromotionViewController.swift in Sources */,
 				34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */,
 				34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */,
 				28577CF51ADDE9D10027262E /* VenueSelectionController.swift in Sources */,
+				C086E7641ADE0FBC00E10601 /* PromotionModel.swift in Sources */,
 				C080CCCE1AC34ACB00D7A2C9 /* BarFeedViewCell.swift in Sources */,
 				28492AE61AC3D5B700F3BB3F /* Yago.xcdatamodeld in Sources */,
 				28739CD31ADCC47F00E5C174 /* CameraMenuItemController.swift in Sources */,

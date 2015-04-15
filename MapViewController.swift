@@ -2,7 +2,7 @@
 //  MapViewController.swift
 //  Yago
 //
-//  Created by Saim Jafar on 2/24/15.
+//  Created by Chad Collins on 2/24/15.
 //  Copyright (c) 2015 Team Socket Power. All rights reserved.
 //
 
