@@ -12,10 +12,12 @@ class DistrictModel {
 
     var id: Int = 0
     var name: String = ""
+    var location: CLLocationCoordinate2D!
 
-    init(id: Int, name: String) {
+    init(id: Int, name: String, location: CLLocationCoordinate2D) {
         self.id = id
         self.name = name
+        self.location = location
     }
     
 }

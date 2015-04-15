@@ -15,6 +15,8 @@ class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MK
     @IBOutlet weak var mapView: MKMapView!
     
     var locationManager: CLLocationManager!
+    var districts: [DistrictModel] = []
+    var location: CLLocationCoordinate2D!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,19 +30,6 @@ class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MK
         locationManager.startUpdatingLocation()
         
         mapView.showsUserLocation = true
-        
-        //Annotations
-        let annotation = BarDistrictAnnotation()
-        annotation.setCoordinate(CLLocationCoordinate2DMake(33.839451, -84.380104)) //buckhead hard coded
-        annotation.title = "Buckhead"
-
-        mapView.addAnnotation(annotation)
-        mapView.selectAnnotation(annotation, animated: false) //NOTE: THIS IS TEMPORARY see below
-        
-        /**
-        The intended functionality here is to have every pin display their label. It appears iOS only allows one
-        pin to be selected at anytime. http://stackoverflow.com/questions/2417952/multiple-annotation-callouts-displaying-in-mkmapview
-        **/
 
     }
 
@@ -51,7 +40,8 @@ class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MK
     
 
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
-        let location = locationManager.location.coordinate
+        self.location = locationManager.location.coordinate
+        getDistricts()
         let span = MKCoordinateSpanMake(0.5,0.5)
         mapView.setRegion(MKCoordinateRegionMake(location, span), animated: true)
     }
@@ -74,20 +64,64 @@ class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MK
     
     func mapView(mapView: MKMapView!, annotationView view: MKAnnotationView!, calloutAccessoryControlTapped control: UIControl!) {
         if let annotation = view.annotation as? BarDistrictAnnotation {
-            self.performSegueWithIdentifier("DistrictFeedSelected", sender: nil)
+            self.performSegueWithIdentifier("DistrictFeedSelected", sender: annotation)
         }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DistrictFeedSelected" {
-            let nextScene = segue.destinationViewController as DistrictFeedViewController
-            //For now
-            let selectedDistrict = DistrictModel(id: 1, name: "Buckhead")
-            nextScene.currentDistrict = selectedDistrict
+            if let annotation = sender as? BarDistrictAnnotation {
+                let nextScene = segue.destinationViewController as DistrictFeedViewController
+                let selectedDistrict = annotation.district
+                nextScene.currentDistrict = selectedDistrict
+            }
         }
     }
     
+    func extractLocationFromString(locationString: String) -> CLLocationCoordinate2D {
+        var pieces: [String] = locationString.componentsSeparatedByString(",")
+        return CLLocationCoordinate2DMake((pieces[0] as NSString).doubleValue, (pieces[1] as NSString).doubleValue)
+    }
     
+    func getDistricts() {
+        var districts:[DistrictModel] = []
+        let manager = AFHTTPRequestOperationManager()
+        var latLong = "\(String(self.location.latitude.description)),\(String(self.location.longitude.description))"
+        manager.GET( API_BASE_URL + "feed/location_feed/\(latLong)",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                if let items = responseObject as? NSArray {
+                    for item in items {
+                        var positionResult = item["position"] as String
+                        var feedItemName = item["name"] as String
+                        var feedItemLocation = self.extractLocationFromString(item["position"] as String)
+                        var feedItemId = item["pk"] as Int
+                        var feedItem:DistrictModel = DistrictModel(
+                            id: item["pk"] as Int,
+                            name: feedItemName,
+                            location: feedItemLocation
+                        )
+                        districts += [feedItem]
+                        let annotation = BarDistrictAnnotation()
+                        annotation.setCoordinate(feedItemLocation) //buckhead hard coded
+                        annotation.title = feedItemName
+                        annotation.district = DistrictModel(id: feedItemId, name: feedItemName, location: feedItemLocation)
+                        self.mapView.addAnnotation(annotation)
+                        self.mapView.selectAnnotation(annotation, animated: false)
+                        
+                        /**
+                        The intended functionality here is to have every pin display their label. It appears iOS only allows one
+                        pin to be selected at anytime. http://stackoverflow.com/questions/2417952/multiple-annotation-callouts-displaying-in-mkmapview
+                        **/
+                    }
+                }
+                self.districts = districts
+                
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+        })
+    }
     
 
 }

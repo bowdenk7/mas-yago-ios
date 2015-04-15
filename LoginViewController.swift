@@ -52,7 +52,7 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
         manager.responseSerializer = AFJSONResponseSerializer()
         var params : Dictionary = ["access_token": token]
         println("Posting auth request")
-        manager.POST( API_BASE_URL + "account/register-by-token/",
+        manager.POST( API_BASE_URL + "account/authenticate_with_token/",
             parameters: params,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 println("Authenticated!")
