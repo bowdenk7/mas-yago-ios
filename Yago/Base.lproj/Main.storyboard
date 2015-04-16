@@ -183,9 +183,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XS7-gm-RHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4296" y="346.5"/>
+            <point key="canvasLocation" x="4296" y="341"/>
         </scene>
-        <!--Item-->
+        <!--Map View Controller-->
         <scene sceneID="nfi-6W-21x">
             <objects>
                 <viewController id="WAa-fE-yo3" customClass="MapViewController" customModule="Yago" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,7 +219,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zLa-Yp-9IZ"/>
+                    <tabBarItem key="tabBarItem" title="" id="zLa-Yp-9IZ"/>
                     <navigationItem key="navigationItem" id="Paw-dR-w0y"/>
                     <connections>
                         <outlet property="mapView" destination="TL1-Fb-TqG" id="omY-sE-uz9"/>
@@ -990,14 +990,14 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="oOZ-JG-82B" kind="relationship" relationship="viewControllers" id="OPD-Qi-pGA"/>
                         <segue destination="fty-mR-Yt5" kind="relationship" relationship="viewControllers" id="7P1-qP-6LU"/>
+                        <segue destination="oOZ-JG-82B" kind="relationship" relationship="viewControllers" id="OPD-Qi-pGA"/>
                         <segue destination="I9c-3n-nZZ" kind="relationship" relationship="viewControllers" id="hXe-ZZ-mGO"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5r-58-wHN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5185.5" y="347.25"/>
+            <point key="canvasLocation" x="5158.5" y="341"/>
         </scene>
         <!--Item-->
         <scene sceneID="AL1-HH-2RJ">
