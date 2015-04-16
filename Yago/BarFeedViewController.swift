@@ -23,6 +23,7 @@ class BarFeedViewController: CameraMenuItemController, UICollectionViewDataSourc
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
                     for item in items {
+                        println(item)
                         var feedItem:PostModel = PostModel(imageUrl: item["image_url"] as! String,
                             likes: item["like__count"] as! Int,
                             timeText: item["time_text"] as! String,
@@ -89,9 +90,9 @@ class BarFeedViewController: CameraMenuItemController, UICollectionViewDataSourc
         cell.timestamp.text = thisItem.timeText
         cell.post = thisItem
         if (thisItem.isLiked) {
-            //cell.likeButton.setImage(UIImage("likeButtonYes"), forState: <#UIControlState#>)
+            cell.likeButton.tintColor = UIColor.greenColor()
         } else {
-            //test
+            cell.likeButton.tintColor = UIColor.grayColor()
         }
         
         return cell
