@@ -61,11 +61,11 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableview: UITableView, numberOfRowsInSection section:Int)-> Int {
-            return promotions.count
+        return promotions.count
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        //todo go to detail view from hereg
+        self.performSegueWithIdentifier("PromotionSelected", sender: nil)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

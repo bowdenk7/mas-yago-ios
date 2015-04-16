@@ -16,6 +16,8 @@
 		28739CCF1ADC8D3100E5C174 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 28739CCE1ADC8D3100E5C174 /* MobileCoreServices.framework */; };
 		28739CD31ADCC47F00E5C174 /* CameraMenuItemController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28739CD21ADCC47F00E5C174 /* CameraMenuItemController.swift */; };
 		28739CD71ADCF70500E5C174 /* cameraOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28739CD61ADCF70500E5C174 /* cameraOverlay.swift */; };
+		287D06691ADF4D6700736FB3 /* PromotionDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D06681ADF4D6700736FB3 /* PromotionDetailController.swift */; };
+		287D066B1ADF4D7D00736FB3 /* RedeemPromotionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287D066A1ADF4D7D00736FB3 /* RedeemPromotionController.swift */; };
 		288578901AD4C7DC00008481 /* PostModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2885788F1AD4C7DC00008481 /* PostModel.swift */; };
 		28F0F9E31AC429C9003A2A85 /* BarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F0F9E21AC429C9003A2A85 /* BarModel.swift */; };
 		34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34556B7B1A9C5512005635FF /* AppDelegate.swift */; };
@@ -58,6 +60,8 @@
 		28739CD01ADC8F2200E5C174 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		28739CD21ADCC47F00E5C174 /* CameraMenuItemController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraMenuItemController.swift; sourceTree = "<group>"; };
 		28739CD61ADCF70500E5C174 /* cameraOverlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cameraOverlay.swift; sourceTree = "<group>"; };
+		287D06681ADF4D6700736FB3 /* PromotionDetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PromotionDetailController.swift; sourceTree = "<group>"; };
+		287D066A1ADF4D7D00736FB3 /* RedeemPromotionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedeemPromotionController.swift; sourceTree = "<group>"; };
 		2885788F1AD4C7DC00008481 /* PostModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostModel.swift; sourceTree = "<group>"; };
 		28F0F9E21AC429C9003A2A85 /* BarModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BarModel.swift; sourceTree = "<group>"; };
 		34556B761A9C5512005635FF /* Yago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yago.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -128,6 +132,8 @@
 				C080CCCB1AC3482A00D7A2C9 /* BarFeedViewController.swift */,
 				28739CD21ADCC47F00E5C174 /* CameraMenuItemController.swift */,
 				28577CF41ADDE9D10027262E /* VenueSelectionController.swift */,
+				287D06681ADF4D6700736FB3 /* PromotionDetailController.swift */,
+				287D066A1ADF4D7D00736FB3 /* RedeemPromotionController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -372,6 +378,8 @@
 				C086E76C1ADE28CF00E10601 /* VenuePromotionViewController.swift in Sources */,
 				34556BA21A9C58D8005635FF /* LoginViewController.swift in Sources */,
 				C0CFFA731ADED9B300F4DF67 /* ProfileViewController.swift in Sources */,
+				287D06691ADF4D6700736FB3 /* PromotionDetailController.swift in Sources */,
+				287D066B1ADF4D7D00736FB3 /* RedeemPromotionController.swift in Sources */,
 				34556B7C1A9C5512005635FF /* AppDelegate.swift in Sources */,
 				28577CF51ADDE9D10027262E /* VenueSelectionController.swift in Sources */,
 				C086E7641ADE0FBC00E10601 /* PromotionModel.swift in Sources */,

@@ -786,11 +786,86 @@
                     <connections>
                         <outlet property="promotionTableView" destination="Pqs-Cd-4Qs" id="cB7-fC-Qa6"/>
                         <outlet property="userYagoPointsAvailable" destination="3MQ-xd-SOk" id="Ol7-h2-mIR"/>
+                        <segue destination="nMi-c0-Oiz" kind="show" identifier="PromotionSelected" id="qWh-Xg-i2V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xzz-ga-aKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="7222.5" y="1005.75"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="cKp-d8-0Zp">
+            <objects>
+                <viewController id="nMi-c0-Oiz" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z1j-b2-kX7"/>
+                        <viewControllerLayoutGuide type="bottom" id="roa-3c-3QE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5Ec-Fc-wa3">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="zHb-AT-3nH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="640"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="zHb-AT-3nH"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zHb-AT-3nH"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <segue destination="KHN-aQ-XZV" kind="show" identifier="TapToRedeem" id="fah-xV-7Ln"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mKu-iZ-JRI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8007" y="1003"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="NlC-ZI-BWv">
+            <objects>
+                <viewController id="KHN-aQ-XZV" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mG6-vg-zLX"/>
+                        <viewControllerLayoutGuide type="bottom" id="4tK-1x-kZd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Ukk-WZ-mJw">
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="eIP-uH-PDt">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="0.0" width="400" height="640"/>
+                                </variation>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="eIP-uH-PDt"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="eIP-uH-PDt"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Vvo-Sa-uoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8731.5" y="1002"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Ve5-XE-fbP">
