@@ -56,7 +56,9 @@ class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MK
             let selectButton: UIButton! = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
             selectButton.frame.size.width = 44
             selectButton.frame.size.height = 44
-            selectButton.backgroundColor = UIColor.greenColor()
+            selectButton.backgroundColor = UIColor.darkGrayColor()
+            selectButton.setTitle(">", forState: UIControlState.Normal)
+            selectButton.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Normal)
             
             pinAnnotationView.rightCalloutAccessoryView = selectButton
             return pinAnnotationView

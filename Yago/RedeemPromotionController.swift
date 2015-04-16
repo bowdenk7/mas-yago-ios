@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Team Socket Power. All rights reserved.
 //
 
-class RedeemPromotionController: UIViewController {
+class RedeemPromotionController: CameraMenuItemController {
     
     @IBOutlet weak var promotionName: UILabel!
     @IBOutlet weak var venueName: UILabel!

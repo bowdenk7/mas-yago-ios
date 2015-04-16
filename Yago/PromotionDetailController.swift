@@ -6,7 +6,7 @@
 //  Copyright (c) 2015 Team Socket Power. All rights reserved.
 //
 
-class PromotionDetailController: UIViewController {
+class PromotionDetailController: CameraMenuItemController {
     
     @IBOutlet weak var balanceAfterPurchase: UILabel!
     @IBOutlet weak var promotionName: UILabel!

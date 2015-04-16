@@ -24,7 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FBProfilePictureView.self
         
         if (FBSession.activeSession().state == FBSessionState.CreatedTokenLoaded) {
+            println("Found active session")
            // FBSession.openActiveSessionWithReadPerm(false)
+            println(self.window?.rootViewController)
             
         }
         let cache = NSURLCache(memoryCapacity: 8 * 1024 * 1024, diskCapacity: 20 * 1024 * 1024, diskPath: nil)
@@ -38,6 +40,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject?) -> Bool {
+        println("Facebook handleOpenUrl")
         return FBAppCall.handleOpenURL(url, sourceApplication: sourceApplication)
     }
 

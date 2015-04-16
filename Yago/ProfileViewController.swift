@@ -9,7 +9,7 @@
 import UIKit
 import QuartzCore
 
-class ProfileViewController: UIViewController {
+class ProfileViewController: CameraMenuItemController {
     var TAB_ITEM_TITLE: String = "Profile"
  
     @IBOutlet weak var LifeTimePoints: UILabel!
