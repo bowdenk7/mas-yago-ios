@@ -43,7 +43,7 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
         promotionTableView.registerNib(nib, forCellReuseIdentifier: "promcustom")
         promotionTableView.separatorStyle = UITableViewCellSeparatorStyle.None
         
-        let points: Int! = NSUserDefaults.standardUserDefaults().objectForKey("userCurrentPoints") as! Int
+        let points: Int! = NSUserDefaults.standardUserDefaults().objectForKey("userCurrentPoints") as Int
         self.userYagoPointsAvailable.text = "\(points)"
         
         getPromotions()
@@ -69,7 +69,7 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell:CustomPromotionTableViewCell = tableView.dequeueReusableCellWithIdentifier("promcustom") as! CustomPromotionTableViewCell
+        let cell:CustomPromotionTableViewCell = tableView.dequeueReusableCellWithIdentifier("promcustom") as CustomPromotionTableViewCell
         var promotion = promotions[indexPath.row]
         cell.loadItem(canAfford:true, promoName:promotion.promotionName, venueName:promotion.venueName, cost:promotion.pointCost)
         return cell
@@ -85,9 +85,9 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
                 if let items = responseObject as? NSArray {
                     for item in items {
                         var feedItem:PromotionModel = PromotionModel(
-                            promotionName: item["name"] as! String,
-                            venueName: item["venue_name"] as! String,
-                            pointCost: item["point_cost"] as! Int)
+                            promotionName: item["name"] as String,
+                            venueName: item["venue_name"] as String,
+                            pointCost: item["point_cost"] as Int)
                         promotions += [feedItem]
                     }
                 }
@@ -101,11 +101,11 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
     
     func getUserData() {
         let manager = AFHTTPRequestOperationManager()
-        var userId: Int! = NSUserDefaults.standardUserDefaults().objectForKey("userId") as! Int
+        var userId: Int! = NSUserDefaults.standardUserDefaults().objectForKey("userId") as Int
         manager.GET( API_BASE_URL + "users/\(userId)/",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!, responseObject: AnyObject!) in
-                let points: Int! = responseObject["current_points"] as! Int
+                let points: Int! = responseObject["current_points"] as Int
                 NSUserDefaults.standardUserDefaults().setObject(points, forKey: "userCurrentPoints")
                 self.userYagoPointsAvailable.text = "\(points)"
 

@@ -38,4 +38,8 @@ class BarFeedViewCell: UICollectionViewCell {
                 println("Error: " + error.localizedDescription)
         })
     }
+    
+    @IBAction func reportPressed(sender: UIButton) {
+    }
+    
 }
