@@ -15,6 +15,11 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var LifeTimePoints: UILabel!
     @IBOutlet weak var currentAvailablePoints: UILabel!
     
+    @IBOutlet weak var twitterButton: UIButton!
+    @IBOutlet weak var instagramButton: UIButton!
+    @IBOutlet weak var twitterLabel: UILabel!
+    @IBOutlet weak var instagramLabel: UILabel!
+    @IBOutlet weak var inviteFriendsButton: UIButton!
     
     @IBAction func twitter(sender: UIButton) {
     }
@@ -31,6 +36,12 @@ class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        twitterButton.enabled = false
+        instagramButton.enabled = false
+        twitterLabel.enabled = false
+        instagramLabel.enabled = false
+        inviteFriendsButton.enabled = false
 
         // Do any additional setup after loading the view.
         self.title = "Profile"  //temporary until we figure out name situation

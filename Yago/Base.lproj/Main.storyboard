@@ -540,7 +540,7 @@
                                     <rect key="frame" x="0.0" y="64" width="400" height="692"/>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="120" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5N-Ez-f6w">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I5N-Ez-f6w">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="156"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -549,7 +549,7 @@
                                     <rect key="frame" x="-1" y="151" width="368" height="128"/>
                                 </variation>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LifeTime Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfT-H3-rOZ">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lifetime Score:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfT-H3-rOZ">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="23"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -564,7 +564,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="246" y="288" width="134" height="22"/>
+                                    <rect key="frame" x="248" y="287" width="136" height="24"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Nqz-ni-idQ">
@@ -574,7 +574,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="159" y="385" width="56" height="56"/>
+                                    <rect key="frame" x="161" y="366" width="56" height="56"/>
                                 </variation>
                                 <connections>
                                     <action selector="twitter:" destination="fty-mR-Yt5" eventType="touchUpInside" id="CdD-Tt-xep"/>
@@ -586,22 +586,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="59" y="385" width="56" height="56"/>
+                                    <rect key="frame" x="59" y="366" width="56" height="56"/>
                                 </variation>
                                 <connections>
                                     <action selector="faceBook:" destination="fty-mR-Yt5" eventType="touchUpInside" id="aiu-NU-Hon"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIJ-Mw-XAQ">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <state key="normal" image="InstagramIcon">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="267" y="385" width="56" height="56"/>
-                                </variation>
-                                <connections>
-                                    <action selector="instagram:" destination="fty-mR-Yt5" eventType="touchUpInside" id="cTx-Sp-nv5"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5R-lr-jQK">
@@ -610,7 +598,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="167" y="442" width="40" height="16"/>
+                                    <rect key="frame" x="169" y="424" width="40" height="16"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwR-qK-eP0">
@@ -619,16 +607,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="51" y="439" width="72" height="22"/>
-                                </variation>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUf-qn-o7Y">
-                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="262" y="439" width="66" height="22"/>
+                                    <rect key="frame" x="51" y="420" width="72" height="24"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhP-0w-HA3">
@@ -643,6 +622,27 @@
                                     <action selector="add5:" destination="fty-mR-Yt5" eventType="touchUpInside" id="yeb-ov-UDZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIJ-Mw-XAQ">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" image="InstagramIcon">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="265" y="366" width="56" height="56"/>
+                                </variation>
+                                <connections>
+                                    <action selector="instagram:" destination="fty-mR-Yt5" eventType="touchUpInside" id="cTx-Sp-nv5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUf-qn-o7Y">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="259" y="420" width="68" height="24"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -653,11 +653,11 @@
                                 <exclude reference="dsd-N0-H3u"/>
                                 <exclude reference="Nqz-ni-idQ"/>
                                 <exclude reference="HFB-kN-qhr"/>
-                                <exclude reference="zIJ-Mw-XAQ"/>
                                 <exclude reference="m5R-lr-jQK"/>
                                 <exclude reference="fwR-qK-eP0"/>
-                                <exclude reference="cUf-qn-o7Y"/>
                                 <exclude reference="dhP-0w-HA3"/>
+                                <exclude reference="zIJ-Mw-XAQ"/>
+                                <exclude reference="cUf-qn-o7Y"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -668,11 +668,11 @@
                                 <include reference="dsd-N0-H3u"/>
                                 <include reference="Nqz-ni-idQ"/>
                                 <include reference="HFB-kN-qhr"/>
-                                <include reference="zIJ-Mw-XAQ"/>
                                 <include reference="m5R-lr-jQK"/>
                                 <include reference="fwR-qK-eP0"/>
-                                <include reference="cUf-qn-o7Y"/>
                                 <include reference="dhP-0w-HA3"/>
+                                <include reference="zIJ-Mw-XAQ"/>
+                                <include reference="cUf-qn-o7Y"/>
                             </mask>
                         </variation>
                     </view>
@@ -680,6 +680,11 @@
                     <connections>
                         <outlet property="LifeTimePoints" destination="dsd-N0-H3u" id="tVG-PY-iaQ"/>
                         <outlet property="currentAvailablePoints" destination="I5N-Ez-f6w" id="W0e-Vt-8Vi"/>
+                        <outlet property="instagramButton" destination="zIJ-Mw-XAQ" id="Qyw-YD-cit"/>
+                        <outlet property="instagramLabel" destination="cUf-qn-o7Y" id="wQY-Oe-owj"/>
+                        <outlet property="inviteFriendsButton" destination="dhP-0w-HA3" id="xyr-Et-XZG"/>
+                        <outlet property="twitterButton" destination="Nqz-ni-idQ" id="bsC-dC-t3X"/>
+                        <outlet property="twitterLabel" destination="m5R-lr-jQK" id="ijc-dB-Nee"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKY-Jk-DMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1045,7 +1050,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="e1F-ZT-JBC" sceneMemberID="viewController">
                     <toolbarItems/>
                     <nil key="simulatedBottomBarMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="rpV-zK-sTm">
+                    <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" backgroundImage="TabBar" selectionIndicatorImage="HighlightedTab" id="rpV-zK-sTm">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1110,11 +1115,13 @@
         <image name="Clock" width="25" height="25"/>
         <image name="FacebookIcon" width="119" height="118"/>
         <image name="FeedButton1" width="25" height="25"/>
+        <image name="HighlightedTab" width="128" height="50"/>
         <image name="InstagramIcon" width="108" height="108"/>
         <image name="Money Bag" width="23" height="25"/>
         <image name="Profile Icon" width="19" height="25"/>
         <image name="Three Dots" width="25" height="6"/>
         <image name="Thumbs Up" width="25" height="25"/>
+        <image name="TabBar" width="380" height="50"/>
         <image name="TwitterIcon" width="108" height="107"/>
         <image name="Under 21" width="543" height="111"/>
         <image name="YagoLogo" width="336" height="360"/>
