@@ -63,10 +63,10 @@ class ProfileViewController: CameraMenuItemController {
         manager.GET( API_BASE_URL + "account/profile_info/",
             parameters: nil,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
-                let lifetime: String! = String(responseObject["lifetime_score"] as! Int)
-                let currentPoints: Int! = responseObject["current_points"] as! Int
+                let lifetime: String! = String(responseObject["lifetime_score"] as Int)
+                let currentPoints: Int! = responseObject["current_points"] as Int
                 NSUserDefaults.standardUserDefaults().setObject(currentPoints, forKey: "userCurrentPoints")
-                let firstName: String! = responseObject["first_name"] as! String
+                let firstName: String! = responseObject["first_name"] as String
                 self.LifeTimePoints.text = lifetime
                 self.currentAvailablePoints.text = String(currentPoints)
                 //self.title = firstName

@@ -8,12 +8,25 @@
 
 import MobileCoreServices
 
+class CustomVenueSelectionTableViewCell: UITableViewCell {
+    @IBOutlet var venueName: UILabel!
+    
+    func loadItem(#name: String) {
+        venueName.text = name
+    }
+    
+}
+
+
 class VenueSelectionController: UITableViewController, UITableViewDelegate, UITableViewDataSource, CLLocationManagerDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
     var locationManager: CLLocationManager!
     var location: CLLocation!
     var venues: [BarModel]!
     var selectedVenue: BarModel!
+    
+    
+    //@IBOutlet var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,17 +36,24 @@ class VenueSelectionController: UITableViewController, UITableViewDelegate, UITa
         locationManager.distanceFilter = 100.0  //how often manager is notified of view change
         locationManager.startUpdatingLocation()
         venues = []
+        //Background Image
+        self.tableView.backgroundView = UIImageView(image: UIImage(named: "Background"))
         
-        self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        
+        //self.tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        var nib = UINib(nibName: "CustomVenueSelectionTableViewCell", bundle: nil)
+        self.tableView.registerNib(nib, forCellReuseIdentifier: "customVenueCell")
     }
+    
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.venues.count;
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
-        cell.textLabel?.text = self.venues[indexPath.row].name
+        var cell:CustomVenueSelectionTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("customVenueCell") as CustomVenueSelectionTableViewCell
+        var vname = self.venues[indexPath.row].name
+        cell.loadItem(name: vname)
         return cell
     }
     
@@ -52,9 +72,9 @@ class VenueSelectionController: UITableViewController, UITableViewDelegate, UITa
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
                     for item in items {
-                        var feedItem:BarModel = BarModel(name: item["name"] as! String,
-                            imageUrl: item["logo_url"] as! String,
-                            id: item["pk"]as! Int)
+                        var feedItem:BarModel = BarModel(name: item["name"] as String,
+                            imageUrl: item["logo_url"] as String,
+                            id: item["pk"]as Int)
                         venues += [feedItem]
                     }
                 }

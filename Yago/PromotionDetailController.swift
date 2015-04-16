@@ -21,7 +21,7 @@ class PromotionDetailController: CameraMenuItemController {
     }
     
     override func viewDidLoad() {
-        let points: Int! = NSUserDefaults.standardUserDefaults().objectForKey("userCurrentPoints") as! Int
+        let points: Int! = NSUserDefaults.standardUserDefaults().objectForKey("userCurrentPoints") as Int
         self.balanceAfterPurchase.text = "\(points - self.promotion.pointCost)"
         self.venueName.text = self.promotion.venueName
         self.venueName.adjustsFontSizeToFitWidth = true
@@ -32,7 +32,7 @@ class PromotionDetailController: CameraMenuItemController {
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "TapToRedeem" {
-            let nextScene = segue.destinationViewController as! RedeemPromotionController
+            let nextScene = segue.destinationViewController as RedeemPromotionController
             nextScene.promotion = self.promotion
         }
     }
