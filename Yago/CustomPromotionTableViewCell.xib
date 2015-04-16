@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6751" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7531" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6736"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7520"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
@@ -17,24 +17,24 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cmR-u8-Beg">
-                        <rect key="frame" x="230" y="6" width="138" height="19"/>
+                        <rect key="frame" x="240" y="4" width="138" height="19"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Promotion Description" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2YN-yl-wyY">
                         <rect key="frame" x="21" y="11" width="202" height="21"/>
                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
-                        <color key="textColor" red="0.97801974090574562" green="0.72440139582969387" blue="0.17079583444089244" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="1" green="0.90089223389999995" blue="0.33860185129999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Venue Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07Y-zJ-R7x">
                         <rect key="frame" x="21" y="32" width="245" height="21"/>
                         <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
-                        <color key="textColor" red="0.97801974089999999" green="0.72440139579999996" blue="0.17079583440000001" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="1" green="0.90089223389999995" blue="0.33860185129999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cost" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuF-y4-YO3">
-                        <rect key="frame" x="279" y="32" width="100" height="22"/>
-                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="19"/>
-                        <color key="textColor" red="0.98431372549019602" green="0.7686274509803922" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Cost" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuF-y4-YO3">
+                        <rect key="frame" x="264" y="26" width="100" height="34"/>
+                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="28"/>
+                        <color key="textColor" red="1" green="0.90089223389999995" blue="0.33860185129999998" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>

@@ -56,9 +56,6 @@ class LoginViewController: UIViewController, FBLoginViewDelegate {
             parameters: params,
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 println("Authenticated!")
-                println(responseObject)
-                println(responseObject["pk"])
-                println(responseObject["current_points"])
                 NSUserDefaults.standardUserDefaults().setObject(responseObject["pk"], forKey: "userId")
                 NSUserDefaults.standardUserDefaults().setObject(responseObject["current_points"], forKey: "userCurrentPoints")
                 self.performSegueWithIdentifier("UserAuthenticated", sender: nil)

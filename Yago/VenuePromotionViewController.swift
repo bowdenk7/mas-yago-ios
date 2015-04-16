@@ -22,6 +22,7 @@ class CustomPromotionTableViewCell: UITableViewCell {
         if(canAfford) {
             ribbonImage.image = UIImage(named: "Promotion Ribbon")
         } else {
+            ribbonImage.image = nil
             promotionDescription.textColor = UIColor.whiteColor()
             venue.textColor = UIColor.whiteColor()
             value.textColor = UIColor.whiteColor()
@@ -35,6 +36,7 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
     @IBOutlet weak var userYagoPointsAvailable: UILabel!
     
     var promotions: [PromotionModel] = []
+    var selectedPromotion: PromotionModel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,10 +47,14 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
         
         let points: Int! = NSUserDefaults.standardUserDefaults().objectForKey("userCurrentPoints") as! Int
         self.userYagoPointsAvailable.text = "\(points)"
-        
-        getPromotions()
         getUserData()
+        getPromotions()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        getUserData()
+        getPromotions()
     }
 
     override func didReceiveMemoryWarning() {
@@ -65,13 +71,22 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        selectedPromotion = promotions[indexPath.row]
         self.performSegueWithIdentifier("PromotionSelected", sender: nil)
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell:CustomPromotionTableViewCell = tableView.dequeueReusableCellWithIdentifier("promcustom") as! CustomPromotionTableViewCell
         var promotion = promotions[indexPath.row]
-        cell.loadItem(canAfford:true, promoName:promotion.promotionName, venueName:promotion.venueName, cost:promotion.pointCost)
+        let currentPoints: Int! = NSUserDefaults.standardUserDefaults().objectForKey("userCurrentPoints") as! Int
+        let canAfford: Bool = currentPoints >= promotion.pointCost
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+        if (canAfford) {
+            cell.userInteractionEnabled = true
+        } else {
+            cell.userInteractionEnabled = false
+        }
+        cell.loadItem(canAfford:canAfford, promoName:promotion.promotionName, venueName:promotion.venueName, cost:promotion.pointCost)
         return cell
     }
     
@@ -87,7 +102,9 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
                         var feedItem:PromotionModel = PromotionModel(
                             promotionName: item["name"] as! String,
                             venueName: item["venue_name"] as! String,
-                            pointCost: item["point_cost"] as! Int)
+                            pointCost: item["point_cost"] as! Int,
+                            id: item["pk"] as! Int
+                        )
                         promotions += [feedItem]
                     }
                 }
@@ -115,16 +132,10 @@ class VenuePromotionViewController: UIViewController, UITableViewDelegate, UITab
         })
     }
 
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "PromotionSelected" {
+            let nextScene = segue.destinationViewController as! PromotionDetailController
+            nextScene.promotion = selectedPromotion
+        }
     }
-    */
-
 }

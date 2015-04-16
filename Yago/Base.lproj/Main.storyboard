@@ -185,7 +185,7 @@
             </objects>
             <point key="canvasLocation" x="4296" y="341"/>
         </scene>
-        <!--Feed-->
+        <!--Yago-->
         <scene sceneID="nfi-6W-21x">
             <objects>
                 <viewController id="WAa-fE-yo3" customClass="MapViewController" customModule="Yago" customModuleProvider="target" sceneMemberID="viewController">
@@ -219,7 +219,7 @@
                             </mask>
                         </variation>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Feed" image="FeedButton1" id="zLa-Yp-9IZ"/>
+                    <tabBarItem key="tabBarItem" title="Yago" image="FeedButton1" id="zLa-Yp-9IZ"/>
                     <navigationItem key="navigationItem" id="Paw-dR-w0y"/>
                     <connections>
                         <outlet property="mapView" destination="TL1-Fb-TqG" id="omY-sE-uz9"/>
@@ -255,7 +255,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OgZ-3Z-jhR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7783.5" y="-386"/>
+            <point key="canvasLocation" x="7297.5" y="-722"/>
         </scene>
         <!--Item-->
         <scene sceneID="3nl-VD-2di">
@@ -684,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKY-Jk-DMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6949.5" y="-366"/>
+            <point key="canvasLocation" x="6031.5" y="-1090"/>
         </scene>
         <!--Item-->
         <scene sceneID="iv0-we-RLJ">
@@ -759,7 +759,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="21" y="246" width="106" height="21"/>
+                                    <rect key="frame" x="21" y="250" width="106" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eqz-bU-hGp">
@@ -768,7 +768,7 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="0.94999999999999996" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="268" y="246" width="52" height="21"/>
+                                    <rect key="frame" x="288" y="250" width="52" height="21"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yago Points" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wYw-28-UgL">
@@ -820,10 +820,10 @@
             </objects>
             <point key="canvasLocation" x="7222.5" y="1005.75"/>
         </scene>
-        <!--Promotion Detail Contorller-->
+        <!--Promotion Detail Controller-->
         <scene sceneID="cKp-d8-0Zp">
             <objects>
-                <viewController id="nMi-c0-Oiz" customClass="PromotionDetailContorller" customModule="Yago" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nMi-c0-Oiz" customClass="PromotionDetailController" customModule="Yago" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z1j-b2-kX7"/>
                         <viewControllerLayoutGuide type="bottom" id="roa-3c-3QE"/>
@@ -887,7 +887,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qOf-59-5ty">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="35"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.90089223387351447" blue="0.33860185126780074" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="257" y="285" width="134" height="42"/>
@@ -896,19 +896,19 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tongue &amp; Groove" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXL-Mm-hH7">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.90089223387351447" blue="0.33860185126780074" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="305" width="238" height="30"/>
+                                    <rect key="frame" x="22" y="305" width="253" height="30"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Cover" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c7z-IU-pdm">
                                 <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="0.90089223387351447" blue="0.33860185126780074" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="22" y="278" width="127" height="21"/>
+                                    <rect key="frame" x="22" y="278" width="253" height="28"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance After Purchase" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sDs-Js-F9W">
@@ -952,6 +952,10 @@
                         </variation>
                     </view>
                     <connections>
+                        <outlet property="balanceAfterPurchase" destination="hWZ-Gq-7N3" id="fVh-PA-260"/>
+                        <outlet property="promotionCost" destination="qOf-59-5ty" id="ZIb-Qm-Sjd"/>
+                        <outlet property="promotionName" destination="c7z-IU-pdm" id="bXl-BQ-sMF"/>
+                        <outlet property="venueName" destination="uXL-Mm-hH7" id="sHY-ej-GKI"/>
                         <segue destination="KHN-aQ-XZV" kind="show" identifier="TapToRedeem" id="fah-xV-7Ln"/>
                     </connections>
                 </viewController>
@@ -959,10 +963,10 @@
             </objects>
             <point key="canvasLocation" x="8019" y="1005"/>
         </scene>
-        <!--View Controller-->
+        <!--Redeem Promotion Controller-->
         <scene sceneID="NlC-ZI-BWv">
             <objects>
-                <viewController id="KHN-aQ-XZV" sceneMemberID="viewController">
+                <viewController id="KHN-aQ-XZV" customClass="RedeemPromotionController" customModule="Yago" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="mG6-vg-zLX"/>
                         <viewControllerLayoutGuide type="bottom" id="4tK-1x-kZd"/>
@@ -985,22 +989,51 @@
                                 <variation key="widthClass=compact" fixedFrame="YES">
                                     <rect key="frame" x="10" y="162" width="357" height="357"/>
                                 </variation>
+                                <connections>
+                                    <action selector="redeemPressed:" destination="KHN-aQ-XZV" eventType="touchUpInside" id="brx-kd-K0G"/>
+                                </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Free Cover" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJ4-el-21D">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="10" y="98" width="357" height="51"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tongue &amp; Groove" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGy-Af-WCs">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="13" y="527" width="351" height="44"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
                                 <exclude reference="eIP-uH-PDt"/>
                                 <exclude reference="9wE-mc-LMj"/>
+                                <exclude reference="jJ4-el-21D"/>
+                                <exclude reference="hGy-Af-WCs"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
                                 <include reference="eIP-uH-PDt"/>
                                 <include reference="9wE-mc-LMj"/>
+                                <include reference="jJ4-el-21D"/>
+                                <include reference="hGy-Af-WCs"/>
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="promotionName" destination="jJ4-el-21D" id="hzx-OA-4zP"/>
+                        <outlet property="venueName" destination="hGy-Af-WCs" id="3Gn-mU-dhC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvo-Sa-uoC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1050,11 +1083,11 @@
             </objects>
             <point key="canvasLocation" x="6304.5" y="1005.75"/>
         </scene>
-        <!--Home-->
+        <!--Profile-->
         <scene sceneID="BTv-4I-n5i">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Fr6-dA-OIx" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Home" image="Profile Icon" id="RJk-Od-jTq"/>
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile Icon" id="RJk-Od-jTq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SdL-1f-GUP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

@@ -10,10 +10,7 @@ import UIKit
 import QuartzCore
 
 class ProfileViewController: UIViewController {
-    var avaialblePoints: Int = 36
-    var lifeTimePoints: Int! = 140
-    var userName: String = "Socket Power"
-    
+    var TAB_ITEM_TITLE: String = "Profile"
  
     @IBOutlet weak var LifeTimePoints: UILabel!
     @IBOutlet weak var currentAvailablePoints: UILabel!
@@ -36,11 +33,12 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        LifeTimePoints.text = "\(lifeTimePoints)"
-        currentAvailablePoints.text = "\(avaialblePoints)"
-        self.title = userName
+        self.title = "Profile"  //temporary until we figure out name situation
         
-        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        getProfileInfo()
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,14 +47,25 @@ class ProfileViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func getProfileInfo() {
+        let manager = AFHTTPRequestOperationManager()
+        manager.GET( API_BASE_URL + "account/profile_info/",
+            parameters: nil,
+            success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
+                let lifetime: String! = String(responseObject["lifetime_score"] as! Int)
+                let currentPoints: Int! = responseObject["current_points"] as! Int
+                NSUserDefaults.standardUserDefaults().setObject(currentPoints, forKey: "userCurrentPoints")
+                let firstName: String! = responseObject["first_name"] as! String
+                self.LifeTimePoints.text = lifetime
+                self.currentAvailablePoints.text = String(currentPoints)
+                //self.title = firstName
+                //self.tabBarItem.title = self.TAB_ITEM_TITLE
+                
+            },
+            failure: { (operation: AFHTTPRequestOperation!,error: NSError!) in
+                println("Error: " + error.localizedDescription)
+        })
+        
     }
-    */
 
 }
