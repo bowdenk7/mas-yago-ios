@@ -8,6 +8,9 @@
 
 class PromotionDetailContorller: UIViewController {
     
+    @IBAction func TapToRedeemPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("TapToRedeem", sender: nil)
+    }
     
     override func viewDidLoad() {
         
