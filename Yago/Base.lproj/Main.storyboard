@@ -16,82 +16,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTy-Gq-uU0" userLabel="Age Confirm View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Are you 21+ years old?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mrz-XX-POC">
-                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="45" y="28" width="211" height="21"/>
-                                        </variation>
-                                    </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7j-o1-hfF">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="Yes"/>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="30" y="72" width="110" height="50"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="yesButtonPress:" destination="uWd-TT-Svj" eventType="touchUpInside" id="OBK-6p-8VR"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfB-3H-R0M">
-                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                        <state key="normal" title="No">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <variation key="widthClass=compact" fixedFrame="YES">
-                                            <rect key="frame" x="161" y="72" width="110" height="50"/>
-                                        </variation>
-                                        <connections>
-                                            <action selector="noButtonPress:" destination="uWd-TT-Svj" eventType="touchUpInside" id="t9D-Eb-Hkr"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="default">
-                                    <mask key="subviews">
-                                        <exclude reference="Mrz-XX-POC"/>
-                                        <exclude reference="M7j-o1-hfF"/>
-                                        <exclude reference="qfB-3H-R0M"/>
-                                    </mask>
-                                </variation>
+                            <imageView userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="T5S-v7-1yH">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="50" y="400" width="300" height="150"/>
-                                    <mask key="subviews">
-                                        <include reference="Mrz-XX-POC"/>
-                                        <include reference="M7j-o1-hfF"/>
-                                        <include reference="qfB-3H-R0M"/>
-                                    </mask>
+                                    <rect key="frame" x="0.0" y="20" width="400" height="646"/>
                                 </variation>
-                            </view>
-                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-hG-9Xi" customClass="FBLoginView">
-                                <rect key="frame" x="200" y="350" width="200" height="100"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="100" y="346" width="200" height="100"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="20" width="400" height="780"/>
                                 </variation>
-                            </view>
+                            </imageView>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pxB-Tk-HqP" userLabel="Age Disclaimer View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, you must be 21 to use this app." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zrT-c4-vT1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry, you must be 21 to use this app." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="261" translatesAutoresizingMaskIntoConstraints="NO" id="zrT-c4-vT1">
                                         <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="20"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="widthClass=compact" fixedFrame="YES">
                                             <rect key="frame" x="30" y="17" width="240" height="47"/>
                                         </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="30" y="17" width="235" height="64"/>
+                                        </variation>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2SI-Ye-4lF">
                                         <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="21"/>
                                         <state key="normal" title="OK">
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
@@ -110,26 +60,113 @@
                                         <exclude reference="2SI-Ye-4lF"/>
                                     </mask>
                                 </variation>
-                                <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="50" y="400" width="300" height="150"/>
+                                <variation key="widthClass=compact">
                                     <mask key="subviews">
                                         <include reference="zrT-c4-vT1"/>
                                         <include reference="2SI-Ye-4lF"/>
                                     </mask>
                                 </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="39" y="464" width="300" height="150"/>
+                                </variation>
                             </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QaJ-hG-9Xi" customClass="FBLoginView">
+                                <rect key="frame" x="200" y="350" width="200" height="100"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="108" y="291" width="200" height="100"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="89" y="463" width="200" height="100"/>
+                                </variation>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTy-Gq-uU0" userLabel="Age Confirm View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M7j-o1-hfF">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" backgroundImage="21 Years"/>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="14" y="16" width="272" height="55"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="14" y="7" width="272" height="55"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="yesButtonPress:" destination="uWd-TT-Svj" eventType="touchUpInside" id="OBK-6p-8VR"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfB-3H-R0M">
+                                        <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" backgroundImage="Under 21">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <variation key="widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="14" y="87" width="272" height="55"/>
+                                        </variation>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="14" y="93" width="272" height="55"/>
+                                        </variation>
+                                        <connections>
+                                            <action selector="noButtonPress:" destination="uWd-TT-Svj" eventType="touchUpInside" id="t9D-Eb-Hkr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="M7j-o1-hfF"/>
+                                        <exclude reference="qfB-3H-R0M"/>
+                                    </mask>
+                                </variation>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="50" y="427" width="300" height="150"/>
+                                    <mask key="subviews">
+                                        <include reference="M7j-o1-hfF"/>
+                                        <include reference="qfB-3H-R0M"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="39" y="461" width="300" height="150"/>
+                                </variation>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YagoLogo" translatesAutoresizingMaskIntoConstraints="NO" id="t7X-Kn-yu8">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="107" y="122" width="161" height="170"/>
+                                </variation>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YagoWords" translatesAutoresizingMaskIntoConstraints="NO" id="vqr-F9-bBM">
+                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="146" y="300" width="82" height="35"/>
+                                </variation>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="MTy-Gq-uU0"/>
+                                <exclude reference="T5S-v7-1yH"/>
                                 <exclude reference="pxB-Tk-HqP"/>
+                                <exclude reference="MTy-Gq-uU0"/>
+                                <exclude reference="t7X-Kn-yu8"/>
+                                <exclude reference="vqr-F9-bBM"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
                             <mask key="subviews">
+                                <include reference="T5S-v7-1yH"/>
                                 <include reference="MTy-Gq-uU0"/>
+                                <exclude reference="t7X-Kn-yu8"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="subviews">
                                 <include reference="pxB-Tk-HqP"/>
+                                <include reference="t7X-Kn-yu8"/>
+                                <include reference="vqr-F9-bBM"/>
                             </mask>
                         </variation>
                     </view>
@@ -146,7 +183,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XS7-gm-RHx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4296" y="347.25"/>
+            <point key="canvasLocation" x="4296" y="346.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="nfi-6W-21x">
@@ -458,7 +495,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999987" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ZcO-K4-C9C">
+                            <imageView userInteractionEnabled="NO" alpha="0.74999999999999978" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="ZcO-K4-C9C">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                 <color key="tintColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
@@ -484,7 +521,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="5" y="135" width="368" height="127"/>
+                                    <rect key="frame" x="-4" y="151" width="368" height="128"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LifeTime Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfT-H3-rOZ">
@@ -493,7 +530,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="92" y="272" width="156" height="25"/>
+                                    <rect key="frame" x="82" y="286" width="156" height="26"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsd-N0-H3u">
@@ -502,7 +539,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="256" y="274" width="134" height="21"/>
+                                    <rect key="frame" x="246" y="288" width="134" height="22"/>
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="Nqz-ni-idQ">
@@ -512,7 +549,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="167" y="426" width="55" height="55"/>
+                                    <rect key="frame" x="159" y="385" width="56" height="56"/>
                                 </variation>
                                 <connections>
                                     <action selector="twitter:" destination="fty-mR-Yt5" eventType="touchUpInside" id="CdD-Tt-xep"/>
@@ -524,7 +561,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="66" y="426" width="55" height="55"/>
+                                    <rect key="frame" x="59" y="385" width="56" height="56"/>
                                 </variation>
                                 <connections>
                                     <action selector="faceBook:" destination="fty-mR-Yt5" eventType="touchUpInside" id="aiu-NU-Hon"/>
@@ -536,22 +573,10 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="274" y="426" width="55" height="55"/>
+                                    <rect key="frame" x="267" y="385" width="56" height="56"/>
                                 </variation>
                                 <connections>
                                     <action selector="instagram:" destination="fty-mR-Yt5" eventType="touchUpInside" id="cTx-Sp-nv5"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="clip" translatesAutoresizingMaskIntoConstraints="NO" id="0ar-rG-A8N">
-                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
-                                <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="8"/>
-                                <state key="normal" title="   Invite Friends to Yago" image="Background _5"/>
-                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
-                                    <rect key="frame" x="0.0" y="528" width="346" height="67"/>
-                                </variation>
-                                <connections>
-                                    <action selector="add5:" destination="fty-mR-Yt5" eventType="touchUpInside" id="JYr-8b-ECx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5R-lr-jQK">
@@ -560,7 +585,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="175" y="489" width="40" height="16"/>
+                                    <rect key="frame" x="167" y="442" width="40" height="16"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Facebook" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwR-qK-eP0">
@@ -569,7 +594,7 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="58" y="484" width="71" height="21"/>
+                                    <rect key="frame" x="51" y="439" width="72" height="22"/>
                                 </variation>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Instagram" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cUf-qn-o7Y">
@@ -578,9 +603,21 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                                 <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="268" y="484" width="66" height="21"/>
+                                    <rect key="frame" x="262" y="439" width="66" height="22"/>
                                 </variation>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhP-0w-HA3">
+                                <rect key="frame" x="-23" y="-15" width="46" height="30"/>
+                                <state key="normal" backgroundImage="plus 5">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="37" y="485" width="301" height="66"/>
+                                </variation>
+                                <connections>
+                                    <action selector="add5:" destination="fty-mR-Yt5" eventType="touchUpInside" id="yeb-ov-UDZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -593,10 +630,10 @@
                                 <exclude reference="Nqz-ni-idQ"/>
                                 <exclude reference="HFB-kN-qhr"/>
                                 <exclude reference="zIJ-Mw-XAQ"/>
-                                <exclude reference="0ar-rG-A8N"/>
                                 <exclude reference="m5R-lr-jQK"/>
                                 <exclude reference="fwR-qK-eP0"/>
                                 <exclude reference="cUf-qn-o7Y"/>
+                                <exclude reference="dhP-0w-HA3"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -609,10 +646,10 @@
                                 <include reference="Nqz-ni-idQ"/>
                                 <include reference="HFB-kN-qhr"/>
                                 <include reference="zIJ-Mw-XAQ"/>
-                                <include reference="0ar-rG-A8N"/>
                                 <include reference="m5R-lr-jQK"/>
                                 <include reference="fwR-qK-eP0"/>
                                 <include reference="cUf-qn-o7Y"/>
+                                <include reference="dhP-0w-HA3"/>
                             </mask>
                         </variation>
                     </view>
@@ -620,6 +657,7 @@
                     <connections>
                         <outlet property="LifeTimePoints" destination="dsd-N0-H3u" id="tVG-PY-iaQ"/>
                         <outlet property="currentAvailablePoints" destination="I5N-Ez-f6w" id="W0e-Vt-8Vi"/>
+                        <outlet property="navTitle" destination="6MP-41-deH" id="oeG-Uy-MQd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mKY-Jk-DMy" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -728,6 +766,11 @@
                                 <exclude reference="Eqz-bU-hGp"/>
                             </mask>
                         </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="zUq-GX-wwD"/>
+                            </mask>
+                        </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="subviews">
                                 <include reference="zUq-GX-wwD"/>
@@ -794,10 +837,14 @@
         </scene>
     </scenes>
     <resources>
+        <image name="21 Years" width="543" height="111"/>
         <image name="Background" width="752" height="1344"/>
-        <image name="Background _5" width="66" height="106"/>
         <image name="FacebookIcon" width="119" height="118"/>
         <image name="InstagramIcon" width="108" height="108"/>
         <image name="TwitterIcon" width="108" height="107"/>
+        <image name="Under 21" width="543" height="111"/>
+        <image name="YagoLogo" width="336" height="360"/>
+        <image name="YagoWords" width="163" height="71"/>
+        <image name="plus 5" width="647" height="112"/>
     </resources>
 </document>

@@ -14,6 +14,8 @@ class ProfileViewController: UIViewController {
     var avaialblePoints: Int = 36
     var lifeTimePoints: Int! = 140
     
+    @IBOutlet weak var navTitle: UINavigationItem!
+
     @IBOutlet weak var LifeTimePoints: UILabel!
     @IBOutlet weak var currentAvailablePoints: UILabel!
     
@@ -35,7 +37,7 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.title = userName
+        navTitle.title = userName
         LifeTimePoints.text = "\(lifeTimePoints)"
         currentAvailablePoints.text = "\(avaialblePoints)"
         
