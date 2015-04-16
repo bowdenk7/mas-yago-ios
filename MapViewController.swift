@@ -30,6 +30,7 @@ class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MK
         locationManager.startUpdatingLocation()
         
         mapView.showsUserLocation = true
+        self.title = "Yago"
 
     }
 

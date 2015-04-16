@@ -10,12 +10,11 @@ import UIKit
 import QuartzCore
 
 class ProfileViewController: UIViewController {
-    var userName: String! = "Alex"
     var avaialblePoints: Int = 36
     var lifeTimePoints: Int! = 140
+    var userName: String = "Socket Power"
     
-    @IBOutlet weak var navTitle: UINavigationItem!
-
+ 
     @IBOutlet weak var LifeTimePoints: UILabel!
     @IBOutlet weak var currentAvailablePoints: UILabel!
     
@@ -37,12 +36,9 @@ class ProfileViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        navTitle.title = userName
         LifeTimePoints.text = "\(lifeTimePoints)"
         currentAvailablePoints.text = "\(avaialblePoints)"
-        
-        //add5.layer.borderWidth = 1
-        //add5.layer.borderColor = UIColor.whiteColor().CGColor
+        self.title = userName
         
         
     }
