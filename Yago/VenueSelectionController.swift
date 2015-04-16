@@ -32,7 +32,7 @@ class VenueSelectionController: UITableViewController, UITableViewDelegate, UITa
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as UITableViewCell
+        var cell:UITableViewCell = self.tableView.dequeueReusableCellWithIdentifier("cell") as! UITableViewCell
         cell.textLabel?.text = self.venues[indexPath.row].name
         return cell
     }
@@ -52,9 +52,9 @@ class VenueSelectionController: UITableViewController, UITableViewDelegate, UITa
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
                     for item in items {
-                        var feedItem:BarModel = BarModel(name: item["name"] as String,
-                            imageUrl: item["logo_url"] as String,
-                            id: item["pk"]as Int)
+                        var feedItem:BarModel = BarModel(name: item["name"] as! String,
+                            imageUrl: item["logo_url"] as! String,
+                            id: item["pk"]as! Int)
                         venues += [feedItem]
                     }
                 }
@@ -72,8 +72,8 @@ class VenueSelectionController: UITableViewController, UITableViewDelegate, UITa
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject: AnyObject]) {
-        let image = info[UIImagePickerControllerOriginalImage]as UIImage
-        createPost(image)
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        createPost(image!)
         self.dismissViewControllerAnimated(true, completion: nil)
         self.navigationController?.popViewControllerAnimated(true)
     }
