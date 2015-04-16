@@ -53,7 +53,7 @@ class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MK
             let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "myPin")
             pinAnnotationView.canShowCallout = true
             
-            let selectButton: UIButton! = UIButton.buttonWithType(UIButtonType.Custom) as UIButton
+            let selectButton: UIButton! = UIButton.buttonWithType(UIButtonType.Custom) as! UIButton
             selectButton.frame.size.width = 44
             selectButton.frame.size.height = 44
             selectButton.backgroundColor = UIColor.darkGrayColor()
@@ -75,7 +75,7 @@ class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MK
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DistrictFeedSelected" {
             if let annotation = sender as? BarDistrictAnnotation {
-                let nextScene = segue.destinationViewController as DistrictFeedViewController
+                let nextScene = segue.destinationViewController as! DistrictFeedViewController
                 let selectedDistrict = annotation.district
                 nextScene.currentDistrict = selectedDistrict
             }
@@ -96,12 +96,12 @@ class MapViewController: CameraMenuItemController, CLLocationManagerDelegate, MK
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
                     for item in items {
-                        var positionResult = item["position"]as String
-                        var feedItemName = item["name"] as String
-                        var feedItemLocation = self.extractLocationFromString(item["position"] as String)
-                        var feedItemId = item["pk"] as Int
+                        var positionResult = item["position"]as! String
+                        var feedItemName = item["name"] as! String
+                        var feedItemLocation = self.extractLocationFromString(item["position"] as! String)
+                        var feedItemId = item["pk"] as! Int
                         var feedItem:DistrictModel = DistrictModel(
-                            id: item["pk"] as Int,
+                            id: item["pk"] as! Int,
                             name: feedItemName,
                             location: feedItemLocation
                         )

@@ -51,7 +51,7 @@ class VenueSelectionController: UITableViewController, UITableViewDelegate, UITa
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell:CustomVenueSelectionTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("customVenueCell") as CustomVenueSelectionTableViewCell
+        var cell:CustomVenueSelectionTableViewCell = self.tableView.dequeueReusableCellWithIdentifier("customVenueCell") as! CustomVenueSelectionTableViewCell
         var vname = self.venues[indexPath.row].name
         cell.loadItem(name: vname)
         return cell
@@ -72,9 +72,9 @@ class VenueSelectionController: UITableViewController, UITableViewDelegate, UITa
             success: { (operation: AFHTTPRequestOperation!,responseObject: AnyObject!) in
                 if let items = responseObject as? NSArray {
                     for item in items {
-                        var feedItem:BarModel = BarModel(name: item["name"] as String,
-                            imageUrl: item["logo_url"] as String,
-                            id: item["pk"]as Int)
+                        var feedItem:BarModel = BarModel(name: item["name"] as! String,
+                            imageUrl: item["logo_url"] as! String,
+                            id: item["pk"]as! Int)
                         venues += [feedItem]
                     }
                 }
